@@ -1,6 +1,12 @@
-import logging
-import socket
-from ..utils.configs import SERVER_IP, UDP_PORT, BUFFER_SIZE, TIMEOUT, LOG_LEVEL
+import logging  # Biblioteca para logging
+import socket  # Biblioteca para comunicação via socket
+import sys
+import os
+
+# Adiciona o caminho do diretório 'src' ao sys.path
+sys.path.append(os.path.join(os.path.dirname(__file__), '../'))
+
+from utils.configs import SERVER_IP, UDP_PORT, BUFFER_SIZE, TIMEOUT, LOG_LEVEL
 
 # Configuração do logging
 logging.basicConfig(
@@ -27,6 +33,7 @@ def servidor_udp():
                 logging.info(f"Resposta enviada para {endereco_cliente}: {resposta}")
             except KeyboardInterrupt:
                 logging.info("Servidor encerrado.")
+                servidor_socket.close()
                 break
 
 if __name__ == "__main__":
