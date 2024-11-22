@@ -14,9 +14,14 @@ logging.basicConfig(
     format="%(asctime)s [%(levelname)s] %(message)s",
 )
 
+def create_message():
+    mensagem = "a" * 50000
+    return mensagem
+
 def cliente_tcp():
     # Mensagem teste
-    mensagem = "Olá, servidor!"
+    mensagem = '10' + create_message() + '11'
+
 
     # Criação do socket UDP
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as cliente_socket:

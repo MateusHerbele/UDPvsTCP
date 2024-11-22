@@ -30,8 +30,14 @@ def servidor_tcp():
                 logging.info(f"Conexão recebida de {endereco_cliente}")
 
                 # Recebe a mensagem do cliente
-                mensagem = cliente.recv(BUFFER_SIZE)
-                logging.info(f"Mensagem recebida de {endereco_cliente}: {mensagem.decode()}")
+                dados = b""
+                while True:
+                    parte = cliente.recv(BUFFER_SIZE)
+                    if not parte:
+                        break
+                    dados += parte
+
+                logging.info(f"Mensagem recebida de {endereco_cliente}: {dados.decode()}")
 
                 # Envia uma resposta para o cliente
                 resposta = "Olá, cliente!"
