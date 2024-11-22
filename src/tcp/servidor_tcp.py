@@ -4,9 +4,9 @@ import sys
 import os
 
 # Adiciona o caminho do diretório 'src' ao sys.path
-sys.path.append(os.path.join(os.path.dirname(_file_), '../'))
+sys.path.append(os.path.join(os.path.dirname(__file__), '../'))
 
-from utils.configs import SERVER_IP, TCP_PORT, BUFFER_SIZE, TIMEOUT, LOG_LEVEL
+from utils.config import SERVER_IP, TCP_PORT, BUFFER_SIZE, TIMEOUT, LOG_LEVEL
 
 # Configuração do logging
 logging.basicConfig(
@@ -28,29 +28,33 @@ def servidor_tcp():
                 # Aceita a conexão do cliente
                 cliente, endereco_cliente = servidor_socket.accept()
                 logging.info(f"Conexão recebida de {endereco_cliente}")
-
+                i = 0 # Contador de mensagens
                 # Recebe a mensagem do cliente
-                dados = b""
-                while True:
-                    parte = cliente.recv(BUFFER_SIZE)
-                    print("parte: " + parte.decode())
-                    dados += parte
-                    if len(parte) < BUFFER_SIZE:
+                while(True):
+                    dados = b""
+                    while True:
+                        parte = cliente.recv(BUFFER_SIZE)
+                        print("parte: " + parte.decode())
+                        dados += parte
+                        if len(parte) < BUFFER_SIZE:
+                            break
+
+                    logging.info(f"Mensagem {i} recebida de {endereco_cliente}: {dados.decode()}")
+                    i += 1
+                    # Envia uma resposta para o cliente
+                    resposta = "Olá, cliente!"
+                    cliente.send(resposta.encode())
+                    logging.info(f"Resposta enviada para {endereco_cliente}: {resposta}")
+
+                    # Fecha a conexão com o cliente após a resposta
+                    if dados.decode() == b"FIM":
+                        logging.info(f"Conexão encerrada com {endereco_cliente}")
+                        cliente.close()
                         break
-
-                logging.info(f"Mensagem recebida de {endereco_cliente}: {dados.decode()}")
-
-                # Envia uma resposta para o cliente
-                resposta = "Olá, cliente!"
-                cliente.send(resposta.encode())
-                logging.info(f"Resposta enviada para {endereco_cliente}: {resposta}")
-
-                # Fecha a conexão com o cliente após a resposta
-                cliente.close()
 
             except KeyboardInterrupt:
                 logging.info("Servidor encerrado.")
                 break
 
-if _name_ == "_main_":
+if __name__ == "__main__":
     servidor_tcp()
