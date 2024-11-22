@@ -1,5 +1,6 @@
 import logging  # Biblioteca para logging
 import socket  # Biblioteca para comunicação via socket
+import time
 import sys
 import os
 
@@ -15,12 +16,12 @@ logging.basicConfig(
 )
 
 def create_message():
-    mensagem = "a" * 50000
+    mensagem = b"a" * 65500
     return mensagem
 
 def cliente_tcp():
     # Mensagem teste
-    mensagem = '10' + create_message() + '11'
+    mensagem = b'10' + create_message() + b'11'
 
 
     # Criação do socket UDP
@@ -30,13 +31,19 @@ def cliente_tcp():
             cliente_socket.settimeout(TIMEOUT)
             # Conecta ao servidor
             cliente_socket.connect((SERVER_IP, TCP_PORT))
+            
+            # Inicia timer
+            inicio = time.time()
             # Envia a mensagem para o servidor
-            cliente_socket.send(mensagem.encode())
+            cliente_socket.send(mensagem)
             logging.info(f"Mensagem enviada para {SERVER_IP}:{TCP_PORT}: {mensagem}")
 
             # Recebe a resposta do servidor
             resposta = cliente_socket.recv(BUFFER_SIZE)
             logging.info(f"Resposta de {SERVER_IP}: {resposta.decode()}")
+            # Finaliza timer
+            RTT = (time.time() - inicio) * 1000 
+            logging.info(f"Tempo p/ resposta do servidor: {RTT}ms")
         except socket.timeout:
             logging.error(f"Timeout de {TIMEOUT} segundos excedido. O servidor não respondeu.")
             cliente_socket.close()

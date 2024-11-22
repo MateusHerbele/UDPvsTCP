@@ -4,7 +4,7 @@ import sys
 import os
 
 # Adiciona o caminho do diretório 'src' ao sys.path
-sys.path.append(os.path.join(os.path.dirname(__file__), '../'))
+sys.path.append(os.path.join(os.path.dirname(_file_), '../'))
 
 from utils.configs import SERVER_IP, TCP_PORT, BUFFER_SIZE, TIMEOUT, LOG_LEVEL
 
@@ -33,9 +33,10 @@ def servidor_tcp():
                 dados = b""
                 while True:
                     parte = cliente.recv(BUFFER_SIZE)
-                    if not parte:
-                        break
+                    print("parte: " + parte.decode())
                     dados += parte
+                    if len(parte) < BUFFER_SIZE:
+                        break
 
                 logging.info(f"Mensagem recebida de {endereco_cliente}: {dados.decode()}")
 
@@ -51,5 +52,5 @@ def servidor_tcp():
                 logging.info("Servidor encerrado.")
                 break
 
-if __name__ == "__main__":
+if _name_ == "_main_":
     servidor_tcp()
