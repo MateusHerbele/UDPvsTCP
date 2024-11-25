@@ -39,6 +39,11 @@ def servidor_tcp():
                         if len(parte) < BUFFER_SIZE:
                             break
                     
+                    # Fecha a conexão com o cliente após a resposta
+                    if dados.decode() == "FIM":
+                        logging.info(f"Conexão encerrada com {endereco_cliente}")
+                        cliente.close()
+                        break
                     numero_do_pacote = dados.decode().split(" ")[1]
                     logging.debug(f"Mensagem {numero_do_pacote} recebida de {endereco_cliente}: {dados.decode()}")
                     logging.info(f"Mensagem {numero_do_pacote} recebida de {endereco_cliente}")
@@ -49,11 +54,6 @@ def servidor_tcp():
                     cliente.send(resposta.encode())
                     logging.info(f"Resposta enviada parsa {endereco_cliente}: {resposta}")
 
-                    # Fecha a conexão com o cliente após a resposta
-                    if dados.decode() == b"FIM":
-                        logging.info(f"Conexão encerrada com {endereco_cliente}")
-                        cliente.close()
-                        break
 
             except KeyboardInterrupt:
                 logging.info("Servidor encerrado.")
