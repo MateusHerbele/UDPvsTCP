@@ -38,6 +38,7 @@ def servidor_tcp():
                         dados += parte
                         if len(parte) < BUFFER_SIZE:
                             break
+                    
                     numero_do_pacote = dados.decode().split(" ")[1]
                     logging.debug(f"Mensagem {numero_do_pacote} recebida de {endereco_cliente}: {dados.decode()}")
                     logging.info(f"Mensagem {numero_do_pacote} recebida de {endereco_cliente}")

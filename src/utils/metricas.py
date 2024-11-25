@@ -49,6 +49,7 @@ def interfaceEnvioTCP(cliente_socket):
         if escolha == "0":
             print("Digite a mensagem a ser enviada")
             mensagem = input()
+            mensagem = f"[PACOTE #{0} {mensagem} FIM]"
             cliente_socket.send(mensagem.encode())
             logging.info(f"Mensagem enviada para {SERVER_IP}: {mensagem}")
             resposta = cliente_socket.recv(BUFFER_SIZE)
