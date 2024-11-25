@@ -8,7 +8,7 @@ import os
 sys.path.append(os.path.join(os.path.dirname(__file__), '../'))
 
 from utils.configs import SERVER_IP, TCP_PORT, TIMEOUT, LOG_LEVEL
-from utils.metricas import *
+from utils.metricas import interfaceEnvioTCP
 
 # Configuração do logging
 logging.basicConfig(

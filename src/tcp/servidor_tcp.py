@@ -52,7 +52,7 @@ def servidor_tcp():
                     # Envia uma resposta para o cliente
                     resposta = f"Pacote {numero_do_pacote} recebido com sucesso!"
                     cliente.send(resposta.encode())
-                    logging.info(f"Resposta enviada parsa {endereco_cliente}: {resposta}")
+                    logging.info(f"Resposta enviada para {endereco_cliente}: {resposta}")
 
 
             except KeyboardInterrupt:

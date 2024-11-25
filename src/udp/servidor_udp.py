@@ -21,7 +21,6 @@ def servidor_udp():
         # Associa o socket a um endereço e porta
         servidor_socket.bind((SERVER_IP, UDP_PORT))
         i = 0  # Contador de mensagens
-
         while True:
             try:
                 # Recebe a mensagem e o endereço do cliente
@@ -31,26 +30,23 @@ def servidor_udp():
 
                 # Verifica se a mensagem é o comando de término
                 if mensagem == "FIM":
-                    logging.info(f"Comando de término recebido de {endereco_cliente}. Encerrando conexão.")
-                    resposta = "Comunicação encerrada. Adeus!"
-                    servidor_socket.sendto(resposta.encode(), endereco_cliente)
+                    logging.info(f"Comunicação encerrada com {endereco_cliente}.")
+                    servidor_socket.sendto(f"Conexão encerrada.\nNúmero de pacotes recebidos: {i}".encode(), endereco_cliente)                    
+                    servidor_socket.close()
                     break
 
                 # Incrementa o contador de pacotes e responde
-                i += 1
                 numero_do_pacote = mensagem.split(" ")[1] if " " in mensagem else str(i)
+                logging.debug(f"Mensagem {numero_do_pacote} recebida de {endereco_cliente}: {dados.decode()}")
+                logging.info(f"Mensagem {numero_do_pacote} recebida de {endereco_cliente}")
+                i += 1
+                logging.info(f"Quantidade de mensagens recebidas: {i}")
                 resposta = f"Pacote {numero_do_pacote} recebido com sucesso!"
                 servidor_socket.sendto(resposta.encode(), endereco_cliente)
-
                 logging.info(f"Resposta enviada para {endereco_cliente}: {resposta}")
-                logging.info(f"Quantidade de mensagens recebidas: {i}")
 
             except KeyboardInterrupt:
                 logging.info("Servidor encerrado manualmente.")
                 break
-            except Exception as e:
-                logging.error(f"Erro no servidor UDP: {e}")
-                break
-
 if __name__ == "__main__":
     servidor_udp()

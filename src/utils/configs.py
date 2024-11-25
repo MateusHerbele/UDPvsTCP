@@ -10,5 +10,5 @@ TCP_PORT = 5002          # Porta para o servidor TCP
 BUFFER_SIZE = 1024       # Tamanho do buffer para recepção/envio
 
 # Outras configurações
-TIMEOUT = 5              # Timeout para conexões (em segundos)
+TIMEOUT = 30              # Timeout para conexões (em segundos)
 LOG_LEVEL = "DEBUG"      # Nível de logging. Opções: DEBUG, INFO, WARNING, ERROR, CRITICAL
