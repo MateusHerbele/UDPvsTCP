@@ -6,7 +6,7 @@ import os
 # Adiciona o caminho do diretório 'src' ao sys.path
 sys.path.append(os.path.join(os.path.dirname(__file__), '../'))
 
-from utils.config import SERVER_IP, TCP_PORT, BUFFER_SIZE, TIMEOUT, LOG_LEVEL
+from utils.configs import SERVER_IP, TCP_PORT, BUFFER_SIZE, LOG_LEVEL
 
 # Configuração do logging
 logging.basicConfig(
@@ -38,13 +38,15 @@ def servidor_tcp():
                         dados += parte
                         if len(parte) < BUFFER_SIZE:
                             break
-
-                    logging.info(f"Mensagem {i} recebida de {endereco_cliente}: {dados.decode()}")
+                    numero_do_pacote = dados.decode().split(" ")[1]
+                    logging.debug(f"Mensagem {numero_do_pacote} recebida de {endereco_cliente}: {dados.decode()}")
+                    logging.info(f"Mensagem {numero_do_pacote} recebida de {endereco_cliente}")
                     i += 1
+                    logging.info(f"Quantidade de mensagens recebidas: {i}")
                     # Envia uma resposta para o cliente
-                    resposta = "Olá, cliente!"
+                    resposta = f"Pacote {numero_do_pacote} recebido com sucesso!"
                     cliente.send(resposta.encode())
-                    logging.info(f"Resposta enviada para {endereco_cliente}: {resposta}")
+                    logging.info(f"Resposta enviada parsa {endereco_cliente}: {resposta}")
 
                     # Fecha a conexão com o cliente após a resposta
                     if dados.decode() == b"FIM":
