@@ -48,9 +48,6 @@ def cliente_tcp():
 
         except Exception as e:
             logging.error(f"[ERRO] Ocorreu um erro inesperado: {e}", exc_info=True)
-    
-    for handler in logging.getLogger().handlers:
-        handler.flush()
 
 
 if __name__ == "__main__":
