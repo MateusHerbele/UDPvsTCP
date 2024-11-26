@@ -2,6 +2,8 @@ import logging
 import time
 import os
 from utils.configs import LOG_LEVEL, BUFFER_SIZE, SERVER_IP, TCP_PORT, UDP_PORT
+from utils.logger import tcp_logger, udp_logger
+# ou udp_logger se for o caso
 
 # # Configuração do logging
 # logging.basicConfig(
@@ -9,72 +11,98 @@ from utils.configs import LOG_LEVEL, BUFFER_SIZE, SERVER_IP, TCP_PORT, UDP_PORT
 #     format="%(asctime)s [%(levelname)s] %(message)s",
 # )
 # Configuração do logging
-log_file = os.path.join(os.path.dirname(__file__), '../../data/logs/cliente.log')  # Define o arquivo de log
+# log_file = os.path.join(os.path.dirname(__file__), '../../data/logs/cliente.log')  # Define o arquivo de log
 
-logging.basicConfig(
-    level=LOG_LEVEL,
-    format="%(asctime)s [%(levelname)s] %(message)s",
-    handlers=[
-        logging.StreamHandler(),  # Log no console
-        logging.FileHandler(log_file, mode='a', encoding='utf-8')  # Log no arquivo
-    ]
-)
+# logging.basicConfig(
+#     level=LOG_LEVEL,
+#     format="%(asctime)s [%(levelname)s] %(message)s",
+#     handlers=[
+#         logging.StreamHandler(),  # Log no console
+#         logging.FileHandler(log_file, mode='a', encoding='utf-8')  # Log no arquivo
+#     ]
+# )
+
+def setup_logger(name, log_file, level=logging.INFO):
+    """
+    Cria e configura um logger com um arquivo de log específico.
+    :param name: Nome do logger.
+    :param log_file: Caminho do arquivo de log.
+    :param level: Nível de log.
+    :return: Logger configurado.
+    """
+    logger = logging.getLogger(name)
+    logger.setLevel(level)
+
+    # Formato do log
+    formatter = logging.Formatter("%(asctime)s [%(levelname)s] %(message)s")
+
+    # Handlers para o arquivo e console
+    file_handler = logging.FileHandler(log_file, mode='a', encoding='utf-8')
+    file_handler.setFormatter(formatter)
+    stream_handler = logging.StreamHandler()
+    stream_handler.setFormatter(formatter)
+
+    # Adicionar handlers ao logger
+    logger.addHandler(file_handler)
+    logger.addHandler(stream_handler)
+
+    return logger
 
 def criaMensagem(tamanho, i):
     mensagem = f"[PACOTE #{i} " + "N" * (tamanho * 10)+ " FIM]"
     return mensagem
 
 def testeTempoEnvioTCP(cliente_socket):
-    logging.info(f"[METRICA] Teste de tempo de envio iniciado")
+    tcp_logger.info(f"[METRICA] Teste de tempo de envio iniciado")
     tamanho = int(input("Digite até que tamanho de pacote será enviado. \n Começamos com 0 e aumentamos de 10 em 10 até o valor digitado: "))
     # Inicia timer
     # Envia a mensagem para o servidor
     tempo_total = time.time()
     for i in range(tamanho):
         mensagem = criaMensagem(tamanho, i)
-        logging.info(f"[METRICA] Tamanho da mensagem {i}: {len(mensagem)}")
+        tcp_logger.info(f"[METRICA] Tamanho da mensagem {i}: {len(mensagem)}")
         inicio = time.time()
         cliente_socket.send(mensagem.encode())
-        logging.info(f"[PACOTE] Mensagem {i} enviada para {SERVER_IP}:{TCP_PORT}: {mensagem}")
+        tcp_logger.info(f"[PACOTE] Mensagem {i} enviada para {SERVER_IP}:{TCP_PORT}: {mensagem}")
 
         # Recebe a resposta do servidor
         resposta = cliente_socket.recv(BUFFER_SIZE)
-        logging.info(f"[PACOTE] Resposta de {SERVER_IP}: {resposta.decode()}")
+        tcp_logger.info(f"[PACOTE] Resposta de {SERVER_IP}: {resposta.decode()}")
 
         # Finaliza timer
         RTT = (time.time() - inicio) * 1000 
-        logging.info(f"[METRICA] Tempo p/ resposta do servidor: {RTT}ms")
+        tcp_logger.info(f"[METRICA] Tempo p/ resposta do servidor: {RTT}ms")
     tempo_total = (time.time() - tempo_total) * 1000
-    logging.info(f"[METRICA] Tempo total de envio de todos os pacotes enviados: {tempo_total}ms")
+    tcp_logger.info(f"[METRICA] Tempo total de envio de todos os pacotes enviados: {tempo_total}ms")
 
 def testeTempoEnvioUDP(cliente_socket):
-    logging.info(f"[METRICA] Teste de tempo de envio iniciado")
+    udp_logger.info(f"[METRICA] Teste de tempo de envio iniciado")
     tamanho = int(input("Digite até que tamanho de pacote será enviado. \nComeçamos com 0 e aumentamos de 10 em 10 até o valor digitado: "))
     # Inicia timer
     # Envia a mensagem para o servidor
     tempo_total = time.time()
     for i in range(tamanho):
         mensagem = criaMensagem(tamanho, i)
-        logging.info(f"[METRICA] Tamanho da mensagem {i}: {len(mensagem)}")
+        udp_logger.info(f"[METRICA] Tamanho da mensagem {i}: {len(mensagem)}")
         inicio = time.time()
         cliente_socket.sendto(mensagem.encode(), (SERVER_IP, UDP_PORT))
-        logging.info(f"[PACOTE] Mensagem {i} enviada para {SERVER_IP}:{UDP_PORT}: {mensagem}")
+        udp_logger.info(f"[PACOTE] Mensagem {i} enviada para {SERVER_IP}:{UDP_PORT}: {mensagem}")
 
         # Recebe a resposta do servidor
         resposta = cliente_socket.recvfrom(BUFFER_SIZE)
-        logging.info(f"[PACOTE] Resposta de {SERVER_IP}: {resposta}")
+        udp_logger.info(f"[PACOTE] Resposta de {SERVER_IP}: {resposta}")
 
         # Finaliza timer
         RTT = (time.time() - inicio) * 1000 
-        logging.info(f"[METRICA] Tempo p/ resposta do servidor: {RTT}ms")
+        udp_logger.info(f"[METRICA] Tempo p/ resposta do servidor: {RTT}ms")
     tempo_total = (time.time() - tempo_total) * 1000
-    logging.info(f"[METRICA] Tempo total de envio de todos os pacotes enviados: {tempo_total}ms")
+    udp_logger.info(f"[METRICA] Tempo total de envio de todos os pacotes enviados: {tempo_total}ms")
 
 # definir as métricas de avaliação da rede
 # Aqui vamos fazer tanto pro udp quanto pro tcp
 # e temos que receber o socket que o cliente está usando 
 def interfaceEnvioTCP(cliente_socket):
-    logging.info(f"[INICIALIZACAO] Interface de envio de pacotes TCP iniciada")
+    tcp_logger.info(f"[INICIALIZACAO] Interface de envio de pacotes TCP iniciada")
     while True:
         print("Escolha a opão de envio de pacotes")
         escolha = input(" 0 - Enviar um pacote \n 1 - Teste de tempo de resposta \n 2 - Teste de vazão \n 3 - Encerrar conexão\n")
@@ -85,24 +113,24 @@ def interfaceEnvioTCP(cliente_socket):
             mensagem = f"[PACOTE #{0} {mensagem} FIM]"
             cliente_socket.send(mensagem.encode())
 
-            #logging.info(f"Mensagem enviada para {SERVER_IP}: {mensagem}")
-            logging.info(f"[PACOTE] Mensagem enviada para {SERVER_IP}: {mensagem}")
+            #tcp_logger.info(f"Mensagem enviada para {SERVER_IP}: {mensagem}")
+            tcp_logger.info(f"[PACOTE] Mensagem enviada para {SERVER_IP}: {mensagem}")
 
             resposta = cliente_socket.recv(BUFFER_SIZE)
-            #logging.info(f"Resposta de {SERVER_IP}: {resposta.decode()}")
-            logging.info(f"[PACOTE] Resposta de {SERVER_IP}: {resposta.decode()}")
+            #tcp_logger.info(f"Resposta de {SERVER_IP}: {resposta.decode()}")
+            tcp_logger.info(f"[PACOTE] Resposta de {SERVER_IP}: {resposta.decode()}")
 
         elif escolha == "1":
             testeTempoEnvioTCP(cliente_socket)
         elif escolha == "3" or KeyboardInterrupt:
-            #logging.info("Encerrando conexão com o servidor TCP")
-            logging.info(f"[ENCERRAMENTO] Conexão encerrada com o servidor TCP")
+            #tcp_logger.info("Encerrando conexão com o servidor TCP")
+            tcp_logger.info(f"[ENCERRAMENTO] Conexão encerrada com o servidor TCP")
             cliente_socket.send(b"FIM")
             cliente_socket.close()    
             break
 
 def interfaceEnvioUDP(cliente_socket):
-    logging.info(f"[INICIALIZACAO] Interface de envio de pacotes UDP iniciada")
+    udp_logger.info(f"[INICIALIZACAO] Interface de envio de pacotes UDP iniciada")
     while True:
         print("Escolha a opão de envio de pacotes")
         escolha = input(" 0 - Enviar um pacote \n 1 - Teste de tempo de resposta \n 2 - Teste de vazão \n 3 - Encerrar sistema\n")
@@ -113,18 +141,18 @@ def interfaceEnvioUDP(cliente_socket):
             mensagem = f"[PACOTE #{0} {mensagem} FIM]"
             cliente_socket.sendto(mensagem.encode(), (SERVER_IP, UDP_PORT))
 
-            #logging.info(f"Mensagem enviada para {SERVER_IP}: {mensagem}")
-            logging.info(f"[PACOTE] Mensagem enviada para {SERVER_IP}: {mensagem}")
+            #udp_logger.info(f"Mensagem enviada para {SERVER_IP}: {mensagem}")
+            udp_logger.info(f"[PACOTE] Mensagem enviada para {SERVER_IP}: {mensagem}")
 
             resposta = cliente_socket.recvfrom(BUFFER_SIZE)
-            #logging.info(f"Resposta de {SERVER_IP}: {resposta}")
-            logging.info(f"[PACOTE] Resposta de {SERVER_IP}: {resposta}")
+            #udp_logger.info(f"Resposta de {SERVER_IP}: {resposta}")
+            udp_logger.info(f"[PACOTE] Resposta de {SERVER_IP}: {resposta}")
 
         elif escolha == "1":
             testeTempoEnvioUDP(cliente_socket)
         elif escolha == "3" or KeyboardInterrupt:
-            #logging.info("Encerrando o sistema de envio de pacotes UDP")
-            logging.info(f"[ENCERRAMENTO] Envio de pacotes UDP")
+            #udp_logger.info("Encerrando o sistema de envio de pacotes UDP")
+            udp_logger.info(f"[ENCERRAMENTO] Envio de pacotes UDP")
             cliente_socket.sendto(b"FIM", (SERVER_IP, UDP_PORT))
             cliente_socket.close()    
             break

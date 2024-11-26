@@ -15025,3 +15025,663 @@ Traceback (most recent call last):
     numero_do_pacote = dados.decode().split(" ")[1]
                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^
 IndexError: list index out of range
+2024-11-26 10:02:05,742 [INFO] [SERVIDOR] Encerrado manualmente pelo usuário.
+2024-11-26 10:02:40,042 [INFO] [INICIALIZACAO] Servidor TCP em 127.0.0.1:5002
+2024-11-26 10:02:40,042 [INFO] [INICIALIZACAO] BUFFER_SIZE=1024, LOG_LEVEL=DEBUG
+2024-11-26 10:02:55,214 [INFO] [CONEXAO] Nova conexão de ('127.0.0.1', 50778)
+2024-11-26 10:03:02,102 [INFO] [PACOTE] Mensagem ##0 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:02,102 [INFO] [STATUS] Total de mensagens recebidas até agora: 1
+2024-11-26 10:03:02,102 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #0 recebido com sucesso!
+2024-11-26 10:03:06,463 [INFO] [PACOTE] Mensagem ##0 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,463 [INFO] [STATUS] Total de mensagens recebidas até agora: 2
+2024-11-26 10:03:06,463 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #0 recebido com sucesso!
+2024-11-26 10:03:06,464 [INFO] [PACOTE] Mensagem ##1 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,465 [INFO] [STATUS] Total de mensagens recebidas até agora: 3
+2024-11-26 10:03:06,465 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #1 recebido com sucesso!
+2024-11-26 10:03:06,466 [INFO] [PACOTE] Mensagem ##2 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,466 [INFO] [STATUS] Total de mensagens recebidas até agora: 4
+2024-11-26 10:03:06,466 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #2 recebido com sucesso!
+2024-11-26 10:03:06,467 [INFO] [PACOTE] Mensagem ##3 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,468 [INFO] [STATUS] Total de mensagens recebidas até agora: 5
+2024-11-26 10:03:06,468 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #3 recebido com sucesso!
+2024-11-26 10:03:06,469 [INFO] [PACOTE] Mensagem ##4 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,469 [INFO] [STATUS] Total de mensagens recebidas até agora: 6
+2024-11-26 10:03:06,469 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #4 recebido com sucesso!
+2024-11-26 10:03:06,470 [INFO] [PACOTE] Mensagem ##5 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,470 [INFO] [STATUS] Total de mensagens recebidas até agora: 7
+2024-11-26 10:03:06,470 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #5 recebido com sucesso!
+2024-11-26 10:03:06,471 [INFO] [PACOTE] Mensagem ##6 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,471 [INFO] [STATUS] Total de mensagens recebidas até agora: 8
+2024-11-26 10:03:06,471 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #6 recebido com sucesso!
+2024-11-26 10:03:06,472 [INFO] [PACOTE] Mensagem ##7 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,472 [INFO] [STATUS] Total de mensagens recebidas até agora: 9
+2024-11-26 10:03:06,473 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #7 recebido com sucesso!
+2024-11-26 10:03:06,473 [INFO] [PACOTE] Mensagem ##8 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,474 [INFO] [STATUS] Total de mensagens recebidas até agora: 10
+2024-11-26 10:03:06,474 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #8 recebido com sucesso!
+2024-11-26 10:03:06,475 [INFO] [PACOTE] Mensagem ##9 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,475 [INFO] [STATUS] Total de mensagens recebidas até agora: 11
+2024-11-26 10:03:06,475 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #9 recebido com sucesso!
+2024-11-26 10:03:06,476 [INFO] [PACOTE] Mensagem ##10 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,476 [INFO] [STATUS] Total de mensagens recebidas até agora: 12
+2024-11-26 10:03:06,476 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #10 recebido com sucesso!
+2024-11-26 10:03:06,477 [INFO] [PACOTE] Mensagem ##11 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,477 [INFO] [STATUS] Total de mensagens recebidas até agora: 13
+2024-11-26 10:03:06,478 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #11 recebido com sucesso!
+2024-11-26 10:03:06,479 [INFO] [PACOTE] Mensagem ##12 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,479 [INFO] [STATUS] Total de mensagens recebidas até agora: 14
+2024-11-26 10:03:06,479 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #12 recebido com sucesso!
+2024-11-26 10:03:06,480 [INFO] [PACOTE] Mensagem ##13 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,480 [INFO] [STATUS] Total de mensagens recebidas até agora: 15
+2024-11-26 10:03:06,480 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #13 recebido com sucesso!
+2024-11-26 10:03:06,481 [INFO] [PACOTE] Mensagem ##14 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,481 [INFO] [STATUS] Total de mensagens recebidas até agora: 16
+2024-11-26 10:03:06,482 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #14 recebido com sucesso!
+2024-11-26 10:03:06,482 [INFO] [PACOTE] Mensagem ##15 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,483 [INFO] [STATUS] Total de mensagens recebidas até agora: 17
+2024-11-26 10:03:06,483 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #15 recebido com sucesso!
+2024-11-26 10:03:06,484 [INFO] [PACOTE] Mensagem ##16 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,484 [INFO] [STATUS] Total de mensagens recebidas até agora: 18
+2024-11-26 10:03:06,484 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #16 recebido com sucesso!
+2024-11-26 10:03:06,485 [INFO] [PACOTE] Mensagem ##17 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,485 [INFO] [STATUS] Total de mensagens recebidas até agora: 19
+2024-11-26 10:03:06,486 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #17 recebido com sucesso!
+2024-11-26 10:03:06,486 [INFO] [PACOTE] Mensagem ##18 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,487 [INFO] [STATUS] Total de mensagens recebidas até agora: 20
+2024-11-26 10:03:06,487 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #18 recebido com sucesso!
+2024-11-26 10:03:06,488 [INFO] [PACOTE] Mensagem ##19 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,488 [INFO] [STATUS] Total de mensagens recebidas até agora: 21
+2024-11-26 10:03:06,488 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #19 recebido com sucesso!
+2024-11-26 10:03:06,489 [INFO] [PACOTE] Mensagem ##20 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,489 [INFO] [STATUS] Total de mensagens recebidas até agora: 22
+2024-11-26 10:03:06,489 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #20 recebido com sucesso!
+2024-11-26 10:03:06,490 [INFO] [PACOTE] Mensagem ##21 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,490 [INFO] [STATUS] Total de mensagens recebidas até agora: 23
+2024-11-26 10:03:06,491 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #21 recebido com sucesso!
+2024-11-26 10:03:06,491 [INFO] [PACOTE] Mensagem ##22 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,492 [INFO] [STATUS] Total de mensagens recebidas até agora: 24
+2024-11-26 10:03:06,492 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #22 recebido com sucesso!
+2024-11-26 10:03:06,493 [INFO] [PACOTE] Mensagem ##23 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,493 [INFO] [STATUS] Total de mensagens recebidas até agora: 25
+2024-11-26 10:03:06,493 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #23 recebido com sucesso!
+2024-11-26 10:03:06,494 [INFO] [PACOTE] Mensagem ##24 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,494 [INFO] [STATUS] Total de mensagens recebidas até agora: 26
+2024-11-26 10:03:06,494 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #24 recebido com sucesso!
+2024-11-26 10:03:06,495 [INFO] [PACOTE] Mensagem ##25 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,495 [INFO] [STATUS] Total de mensagens recebidas até agora: 27
+2024-11-26 10:03:06,495 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #25 recebido com sucesso!
+2024-11-26 10:03:06,496 [INFO] [PACOTE] Mensagem ##26 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,496 [INFO] [STATUS] Total de mensagens recebidas até agora: 28
+2024-11-26 10:03:06,496 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #26 recebido com sucesso!
+2024-11-26 10:03:06,497 [INFO] [PACOTE] Mensagem ##27 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,497 [INFO] [STATUS] Total de mensagens recebidas até agora: 29
+2024-11-26 10:03:06,497 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #27 recebido com sucesso!
+2024-11-26 10:03:06,498 [INFO] [PACOTE] Mensagem ##28 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,498 [INFO] [STATUS] Total de mensagens recebidas até agora: 30
+2024-11-26 10:03:06,498 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #28 recebido com sucesso!
+2024-11-26 10:03:06,499 [INFO] [PACOTE] Mensagem ##29 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,499 [INFO] [STATUS] Total de mensagens recebidas até agora: 31
+2024-11-26 10:03:06,499 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #29 recebido com sucesso!
+2024-11-26 10:03:06,499 [INFO] [PACOTE] Mensagem ##30 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,499 [INFO] [STATUS] Total de mensagens recebidas até agora: 32
+2024-11-26 10:03:06,500 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #30 recebido com sucesso!
+2024-11-26 10:03:06,500 [INFO] [PACOTE] Mensagem ##31 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,500 [INFO] [STATUS] Total de mensagens recebidas até agora: 33
+2024-11-26 10:03:06,500 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #31 recebido com sucesso!
+2024-11-26 10:03:06,501 [INFO] [PACOTE] Mensagem ##32 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,501 [INFO] [STATUS] Total de mensagens recebidas até agora: 34
+2024-11-26 10:03:06,501 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #32 recebido com sucesso!
+2024-11-26 10:03:06,501 [INFO] [PACOTE] Mensagem ##33 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,501 [INFO] [STATUS] Total de mensagens recebidas até agora: 35
+2024-11-26 10:03:06,502 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #33 recebido com sucesso!
+2024-11-26 10:03:06,502 [INFO] [PACOTE] Mensagem ##34 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,502 [INFO] [STATUS] Total de mensagens recebidas até agora: 36
+2024-11-26 10:03:06,502 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #34 recebido com sucesso!
+2024-11-26 10:03:06,509 [INFO] [PACOTE] Mensagem ##35 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,509 [INFO] [STATUS] Total de mensagens recebidas até agora: 37
+2024-11-26 10:03:06,509 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #35 recebido com sucesso!
+2024-11-26 10:03:06,509 [INFO] [PACOTE] Mensagem ##36 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,510 [INFO] [STATUS] Total de mensagens recebidas até agora: 38
+2024-11-26 10:03:06,510 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #36 recebido com sucesso!
+2024-11-26 10:03:06,519 [INFO] [PACOTE] Mensagem ##37 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,519 [INFO] [STATUS] Total de mensagens recebidas até agora: 39
+2024-11-26 10:03:06,519 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #37 recebido com sucesso!
+2024-11-26 10:03:06,519 [INFO] [PACOTE] Mensagem ##38 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,519 [INFO] [STATUS] Total de mensagens recebidas até agora: 40
+2024-11-26 10:03:06,519 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #38 recebido com sucesso!
+2024-11-26 10:03:06,520 [INFO] [PACOTE] Mensagem ##39 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,520 [INFO] [STATUS] Total de mensagens recebidas até agora: 41
+2024-11-26 10:03:06,520 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #39 recebido com sucesso!
+2024-11-26 10:03:06,520 [INFO] [PACOTE] Mensagem ##40 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,520 [INFO] [STATUS] Total de mensagens recebidas até agora: 42
+2024-11-26 10:03:06,520 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #40 recebido com sucesso!
+2024-11-26 10:03:06,520 [INFO] [PACOTE] Mensagem ##41 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,521 [INFO] [STATUS] Total de mensagens recebidas até agora: 43
+2024-11-26 10:03:06,521 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #41 recebido com sucesso!
+2024-11-26 10:03:06,521 [INFO] [PACOTE] Mensagem ##42 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,521 [INFO] [STATUS] Total de mensagens recebidas até agora: 44
+2024-11-26 10:03:06,521 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #42 recebido com sucesso!
+2024-11-26 10:03:06,521 [INFO] [PACOTE] Mensagem ##43 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,521 [INFO] [STATUS] Total de mensagens recebidas até agora: 45
+2024-11-26 10:03:06,521 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #43 recebido com sucesso!
+2024-11-26 10:03:06,522 [INFO] [PACOTE] Mensagem ##44 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,522 [INFO] [STATUS] Total de mensagens recebidas até agora: 46
+2024-11-26 10:03:06,522 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #44 recebido com sucesso!
+2024-11-26 10:03:06,522 [INFO] [PACOTE] Mensagem ##45 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,522 [INFO] [STATUS] Total de mensagens recebidas até agora: 47
+2024-11-26 10:03:06,522 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #45 recebido com sucesso!
+2024-11-26 10:03:06,522 [INFO] [PACOTE] Mensagem ##46 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,522 [INFO] [STATUS] Total de mensagens recebidas até agora: 48
+2024-11-26 10:03:06,523 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #46 recebido com sucesso!
+2024-11-26 10:03:06,523 [INFO] [PACOTE] Mensagem ##47 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,523 [INFO] [STATUS] Total de mensagens recebidas até agora: 49
+2024-11-26 10:03:06,523 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #47 recebido com sucesso!
+2024-11-26 10:03:06,523 [INFO] [PACOTE] Mensagem ##48 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,523 [INFO] [STATUS] Total de mensagens recebidas até agora: 50
+2024-11-26 10:03:06,523 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #48 recebido com sucesso!
+2024-11-26 10:03:06,524 [INFO] [PACOTE] Mensagem ##49 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,524 [INFO] [STATUS] Total de mensagens recebidas até agora: 51
+2024-11-26 10:03:06,524 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #49 recebido com sucesso!
+2024-11-26 10:03:06,524 [INFO] [PACOTE] Mensagem ##50 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,524 [INFO] [STATUS] Total de mensagens recebidas até agora: 52
+2024-11-26 10:03:06,524 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #50 recebido com sucesso!
+2024-11-26 10:03:06,524 [INFO] [PACOTE] Mensagem ##51 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,524 [INFO] [STATUS] Total de mensagens recebidas até agora: 53
+2024-11-26 10:03:06,525 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #51 recebido com sucesso!
+2024-11-26 10:03:06,525 [INFO] [PACOTE] Mensagem ##52 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,525 [INFO] [STATUS] Total de mensagens recebidas até agora: 54
+2024-11-26 10:03:06,525 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #52 recebido com sucesso!
+2024-11-26 10:03:06,525 [INFO] [PACOTE] Mensagem ##53 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,525 [INFO] [STATUS] Total de mensagens recebidas até agora: 55
+2024-11-26 10:03:06,525 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #53 recebido com sucesso!
+2024-11-26 10:03:06,526 [INFO] [PACOTE] Mensagem ##54 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,526 [INFO] [STATUS] Total de mensagens recebidas até agora: 56
+2024-11-26 10:03:06,526 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #54 recebido com sucesso!
+2024-11-26 10:03:06,526 [INFO] [PACOTE] Mensagem ##55 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,526 [INFO] [STATUS] Total de mensagens recebidas até agora: 57
+2024-11-26 10:03:06,526 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #55 recebido com sucesso!
+2024-11-26 10:03:06,526 [INFO] [PACOTE] Mensagem ##56 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,527 [INFO] [STATUS] Total de mensagens recebidas até agora: 58
+2024-11-26 10:03:06,527 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #56 recebido com sucesso!
+2024-11-26 10:03:06,527 [INFO] [PACOTE] Mensagem ##57 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,527 [INFO] [STATUS] Total de mensagens recebidas até agora: 59
+2024-11-26 10:03:06,527 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #57 recebido com sucesso!
+2024-11-26 10:03:06,527 [INFO] [PACOTE] Mensagem ##58 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,527 [INFO] [STATUS] Total de mensagens recebidas até agora: 60
+2024-11-26 10:03:06,527 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #58 recebido com sucesso!
+2024-11-26 10:03:06,528 [INFO] [PACOTE] Mensagem ##59 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,528 [INFO] [STATUS] Total de mensagens recebidas até agora: 61
+2024-11-26 10:03:06,528 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #59 recebido com sucesso!
+2024-11-26 10:03:06,528 [INFO] [PACOTE] Mensagem ##60 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,528 [INFO] [STATUS] Total de mensagens recebidas até agora: 62
+2024-11-26 10:03:06,528 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #60 recebido com sucesso!
+2024-11-26 10:03:06,528 [INFO] [PACOTE] Mensagem ##61 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,528 [INFO] [STATUS] Total de mensagens recebidas até agora: 63
+2024-11-26 10:03:06,528 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #61 recebido com sucesso!
+2024-11-26 10:03:06,529 [INFO] [PACOTE] Mensagem ##62 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,529 [INFO] [STATUS] Total de mensagens recebidas até agora: 64
+2024-11-26 10:03:06,529 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #62 recebido com sucesso!
+2024-11-26 10:03:06,529 [INFO] [PACOTE] Mensagem ##63 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,529 [INFO] [STATUS] Total de mensagens recebidas até agora: 65
+2024-11-26 10:03:06,529 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #63 recebido com sucesso!
+2024-11-26 10:03:06,529 [INFO] [PACOTE] Mensagem ##64 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,529 [INFO] [STATUS] Total de mensagens recebidas até agora: 66
+2024-11-26 10:03:06,529 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #64 recebido com sucesso!
+2024-11-26 10:03:06,530 [INFO] [PACOTE] Mensagem ##65 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,530 [INFO] [STATUS] Total de mensagens recebidas até agora: 67
+2024-11-26 10:03:06,530 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #65 recebido com sucesso!
+2024-11-26 10:03:06,530 [INFO] [PACOTE] Mensagem ##66 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,530 [INFO] [STATUS] Total de mensagens recebidas até agora: 68
+2024-11-26 10:03:06,530 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #66 recebido com sucesso!
+2024-11-26 10:03:06,530 [INFO] [PACOTE] Mensagem ##67 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,530 [INFO] [STATUS] Total de mensagens recebidas até agora: 69
+2024-11-26 10:03:06,530 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #67 recebido com sucesso!
+2024-11-26 10:03:06,531 [INFO] [PACOTE] Mensagem ##68 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,531 [INFO] [STATUS] Total de mensagens recebidas até agora: 70
+2024-11-26 10:03:06,531 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #68 recebido com sucesso!
+2024-11-26 10:03:06,531 [INFO] [PACOTE] Mensagem ##69 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,531 [INFO] [STATUS] Total de mensagens recebidas até agora: 71
+2024-11-26 10:03:06,531 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #69 recebido com sucesso!
+2024-11-26 10:03:06,531 [INFO] [PACOTE] Mensagem ##70 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,531 [INFO] [STATUS] Total de mensagens recebidas até agora: 72
+2024-11-26 10:03:06,531 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #70 recebido com sucesso!
+2024-11-26 10:03:06,532 [INFO] [PACOTE] Mensagem ##71 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,532 [INFO] [STATUS] Total de mensagens recebidas até agora: 73
+2024-11-26 10:03:06,532 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #71 recebido com sucesso!
+2024-11-26 10:03:06,532 [INFO] [PACOTE] Mensagem ##72 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,532 [INFO] [STATUS] Total de mensagens recebidas até agora: 74
+2024-11-26 10:03:06,532 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #72 recebido com sucesso!
+2024-11-26 10:03:06,532 [INFO] [PACOTE] Mensagem ##73 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,532 [INFO] [STATUS] Total de mensagens recebidas até agora: 75
+2024-11-26 10:03:06,532 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #73 recebido com sucesso!
+2024-11-26 10:03:06,532 [INFO] [PACOTE] Mensagem ##74 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,533 [INFO] [STATUS] Total de mensagens recebidas até agora: 76
+2024-11-26 10:03:06,533 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #74 recebido com sucesso!
+2024-11-26 10:03:06,533 [INFO] [PACOTE] Mensagem ##75 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,533 [INFO] [STATUS] Total de mensagens recebidas até agora: 77
+2024-11-26 10:03:06,533 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #75 recebido com sucesso!
+2024-11-26 10:03:06,533 [INFO] [PACOTE] Mensagem ##76 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,533 [INFO] [STATUS] Total de mensagens recebidas até agora: 78
+2024-11-26 10:03:06,533 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #76 recebido com sucesso!
+2024-11-26 10:03:06,534 [INFO] [PACOTE] Mensagem ##77 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,534 [INFO] [STATUS] Total de mensagens recebidas até agora: 79
+2024-11-26 10:03:06,534 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #77 recebido com sucesso!
+2024-11-26 10:03:06,534 [INFO] [PACOTE] Mensagem ##78 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,534 [INFO] [STATUS] Total de mensagens recebidas até agora: 80
+2024-11-26 10:03:06,534 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #78 recebido com sucesso!
+2024-11-26 10:03:06,534 [INFO] [PACOTE] Mensagem ##79 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,535 [INFO] [STATUS] Total de mensagens recebidas até agora: 81
+2024-11-26 10:03:06,535 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #79 recebido com sucesso!
+2024-11-26 10:03:06,535 [INFO] [PACOTE] Mensagem ##80 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,535 [INFO] [STATUS] Total de mensagens recebidas até agora: 82
+2024-11-26 10:03:06,535 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #80 recebido com sucesso!
+2024-11-26 10:03:06,535 [INFO] [PACOTE] Mensagem ##81 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,535 [INFO] [STATUS] Total de mensagens recebidas até agora: 83
+2024-11-26 10:03:06,535 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #81 recebido com sucesso!
+2024-11-26 10:03:06,536 [INFO] [PACOTE] Mensagem ##82 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,536 [INFO] [STATUS] Total de mensagens recebidas até agora: 84
+2024-11-26 10:03:06,536 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #82 recebido com sucesso!
+2024-11-26 10:03:06,536 [INFO] [PACOTE] Mensagem ##83 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,536 [INFO] [STATUS] Total de mensagens recebidas até agora: 85
+2024-11-26 10:03:06,536 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #83 recebido com sucesso!
+2024-11-26 10:03:06,537 [INFO] [PACOTE] Mensagem ##84 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,537 [INFO] [STATUS] Total de mensagens recebidas até agora: 86
+2024-11-26 10:03:06,537 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #84 recebido com sucesso!
+2024-11-26 10:03:06,537 [INFO] [PACOTE] Mensagem ##85 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,537 [INFO] [STATUS] Total de mensagens recebidas até agora: 87
+2024-11-26 10:03:06,537 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #85 recebido com sucesso!
+2024-11-26 10:03:06,538 [INFO] [PACOTE] Mensagem ##86 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,538 [INFO] [STATUS] Total de mensagens recebidas até agora: 88
+2024-11-26 10:03:06,538 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #86 recebido com sucesso!
+2024-11-26 10:03:06,538 [INFO] [PACOTE] Mensagem ##87 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,538 [INFO] [STATUS] Total de mensagens recebidas até agora: 89
+2024-11-26 10:03:06,538 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #87 recebido com sucesso!
+2024-11-26 10:03:06,539 [INFO] [PACOTE] Mensagem ##88 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,539 [INFO] [STATUS] Total de mensagens recebidas até agora: 90
+2024-11-26 10:03:06,539 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #88 recebido com sucesso!
+2024-11-26 10:03:06,539 [INFO] [PACOTE] Mensagem ##89 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,539 [INFO] [STATUS] Total de mensagens recebidas até agora: 91
+2024-11-26 10:03:06,539 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #89 recebido com sucesso!
+2024-11-26 10:03:06,539 [INFO] [PACOTE] Mensagem ##90 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,539 [INFO] [STATUS] Total de mensagens recebidas até agora: 92
+2024-11-26 10:03:06,539 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #90 recebido com sucesso!
+2024-11-26 10:03:06,540 [INFO] [PACOTE] Mensagem ##91 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,540 [INFO] [STATUS] Total de mensagens recebidas até agora: 93
+2024-11-26 10:03:06,540 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #91 recebido com sucesso!
+2024-11-26 10:03:06,540 [INFO] [PACOTE] Mensagem ##92 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,540 [INFO] [STATUS] Total de mensagens recebidas até agora: 94
+2024-11-26 10:03:06,540 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #92 recebido com sucesso!
+2024-11-26 10:03:06,540 [INFO] [PACOTE] Mensagem ##93 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,541 [INFO] [STATUS] Total de mensagens recebidas até agora: 95
+2024-11-26 10:03:06,541 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #93 recebido com sucesso!
+2024-11-26 10:03:06,541 [INFO] [PACOTE] Mensagem ##94 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,541 [INFO] [STATUS] Total de mensagens recebidas até agora: 96
+2024-11-26 10:03:06,541 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #94 recebido com sucesso!
+2024-11-26 10:03:06,541 [INFO] [PACOTE] Mensagem ##95 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,541 [INFO] [STATUS] Total de mensagens recebidas até agora: 97
+2024-11-26 10:03:06,541 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #95 recebido com sucesso!
+2024-11-26 10:03:06,542 [INFO] [PACOTE] Mensagem ##96 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,542 [INFO] [STATUS] Total de mensagens recebidas até agora: 98
+2024-11-26 10:03:06,542 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #96 recebido com sucesso!
+2024-11-26 10:03:06,542 [INFO] [PACOTE] Mensagem ##97 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,542 [INFO] [STATUS] Total de mensagens recebidas até agora: 99
+2024-11-26 10:03:06,542 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #97 recebido com sucesso!
+2024-11-26 10:03:06,543 [INFO] [PACOTE] Mensagem ##98 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,543 [INFO] [STATUS] Total de mensagens recebidas até agora: 100
+2024-11-26 10:03:06,543 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #98 recebido com sucesso!
+2024-11-26 10:03:06,543 [INFO] [PACOTE] Mensagem ##99 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,543 [INFO] [STATUS] Total de mensagens recebidas até agora: 101
+2024-11-26 10:03:06,543 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #99 recebido com sucesso!
+2024-11-26 10:03:06,544 [INFO] [PACOTE] Mensagem ##100 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,544 [INFO] [STATUS] Total de mensagens recebidas até agora: 102
+2024-11-26 10:03:06,544 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #100 recebido com sucesso!
+2024-11-26 10:03:06,544 [INFO] [PACOTE] Mensagem ##101 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,544 [INFO] [STATUS] Total de mensagens recebidas até agora: 103
+2024-11-26 10:03:06,544 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #101 recebido com sucesso!
+2024-11-26 10:03:06,544 [INFO] [PACOTE] Mensagem ##102 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,544 [INFO] [STATUS] Total de mensagens recebidas até agora: 104
+2024-11-26 10:03:06,544 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #102 recebido com sucesso!
+2024-11-26 10:03:06,545 [INFO] [PACOTE] Mensagem ##103 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,545 [INFO] [STATUS] Total de mensagens recebidas até agora: 105
+2024-11-26 10:03:06,545 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #103 recebido com sucesso!
+2024-11-26 10:03:06,545 [INFO] [PACOTE] Mensagem ##104 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,545 [INFO] [STATUS] Total de mensagens recebidas até agora: 106
+2024-11-26 10:03:06,545 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #104 recebido com sucesso!
+2024-11-26 10:03:06,546 [INFO] [PACOTE] Mensagem ##105 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,546 [INFO] [STATUS] Total de mensagens recebidas até agora: 107
+2024-11-26 10:03:06,546 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #105 recebido com sucesso!
+2024-11-26 10:03:06,546 [INFO] [PACOTE] Mensagem ##106 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,546 [INFO] [STATUS] Total de mensagens recebidas até agora: 108
+2024-11-26 10:03:06,547 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #106 recebido com sucesso!
+2024-11-26 10:03:06,547 [INFO] [PACOTE] Mensagem ##107 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,547 [INFO] [STATUS] Total de mensagens recebidas até agora: 109
+2024-11-26 10:03:06,547 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #107 recebido com sucesso!
+2024-11-26 10:03:06,547 [INFO] [PACOTE] Mensagem ##108 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,547 [INFO] [STATUS] Total de mensagens recebidas até agora: 110
+2024-11-26 10:03:06,547 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #108 recebido com sucesso!
+2024-11-26 10:03:06,548 [INFO] [PACOTE] Mensagem ##109 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,548 [INFO] [STATUS] Total de mensagens recebidas até agora: 111
+2024-11-26 10:03:06,548 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #109 recebido com sucesso!
+2024-11-26 10:03:06,548 [INFO] [PACOTE] Mensagem ##110 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,548 [INFO] [STATUS] Total de mensagens recebidas até agora: 112
+2024-11-26 10:03:06,548 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #110 recebido com sucesso!
+2024-11-26 10:03:06,548 [INFO] [PACOTE] Mensagem ##111 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,548 [INFO] [STATUS] Total de mensagens recebidas até agora: 113
+2024-11-26 10:03:06,549 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #111 recebido com sucesso!
+2024-11-26 10:03:06,552 [INFO] [PACOTE] Mensagem ##112 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,552 [INFO] [STATUS] Total de mensagens recebidas até agora: 114
+2024-11-26 10:03:06,552 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #112 recebido com sucesso!
+2024-11-26 10:03:06,552 [INFO] [PACOTE] Mensagem ##113 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,552 [INFO] [STATUS] Total de mensagens recebidas até agora: 115
+2024-11-26 10:03:06,553 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #113 recebido com sucesso!
+2024-11-26 10:03:06,553 [INFO] [PACOTE] Mensagem ##114 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,553 [INFO] [STATUS] Total de mensagens recebidas até agora: 116
+2024-11-26 10:03:06,553 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #114 recebido com sucesso!
+2024-11-26 10:03:06,553 [INFO] [PACOTE] Mensagem ##115 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,553 [INFO] [STATUS] Total de mensagens recebidas até agora: 117
+2024-11-26 10:03:06,553 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #115 recebido com sucesso!
+2024-11-26 10:03:06,554 [INFO] [PACOTE] Mensagem ##116 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,554 [INFO] [STATUS] Total de mensagens recebidas até agora: 118
+2024-11-26 10:03:06,554 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #116 recebido com sucesso!
+2024-11-26 10:03:06,554 [INFO] [PACOTE] Mensagem ##117 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,554 [INFO] [STATUS] Total de mensagens recebidas até agora: 119
+2024-11-26 10:03:06,554 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #117 recebido com sucesso!
+2024-11-26 10:03:06,555 [INFO] [PACOTE] Mensagem ##118 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,555 [INFO] [STATUS] Total de mensagens recebidas até agora: 120
+2024-11-26 10:03:06,555 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #118 recebido com sucesso!
+2024-11-26 10:03:06,555 [INFO] [PACOTE] Mensagem ##119 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,555 [INFO] [STATUS] Total de mensagens recebidas até agora: 121
+2024-11-26 10:03:06,555 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #119 recebido com sucesso!
+2024-11-26 10:03:06,556 [INFO] [PACOTE] Mensagem ##120 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,556 [INFO] [STATUS] Total de mensagens recebidas até agora: 122
+2024-11-26 10:03:06,556 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #120 recebido com sucesso!
+2024-11-26 10:03:06,556 [INFO] [PACOTE] Mensagem ##121 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,556 [INFO] [STATUS] Total de mensagens recebidas até agora: 123
+2024-11-26 10:03:06,556 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #121 recebido com sucesso!
+2024-11-26 10:03:06,557 [INFO] [PACOTE] Mensagem ##122 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,557 [INFO] [STATUS] Total de mensagens recebidas até agora: 124
+2024-11-26 10:03:06,557 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #122 recebido com sucesso!
+2024-11-26 10:03:06,557 [INFO] [PACOTE] Mensagem ##123 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,557 [INFO] [STATUS] Total de mensagens recebidas até agora: 125
+2024-11-26 10:03:06,557 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #123 recebido com sucesso!
+2024-11-26 10:03:06,563 [INFO] [PACOTE] Mensagem ##124 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,563 [INFO] [STATUS] Total de mensagens recebidas até agora: 126
+2024-11-26 10:03:06,563 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #124 recebido com sucesso!
+2024-11-26 10:03:06,564 [INFO] [PACOTE] Mensagem ##125 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,564 [INFO] [STATUS] Total de mensagens recebidas até agora: 127
+2024-11-26 10:03:06,564 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #125 recebido com sucesso!
+2024-11-26 10:03:06,564 [INFO] [PACOTE] Mensagem ##126 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,564 [INFO] [STATUS] Total de mensagens recebidas até agora: 128
+2024-11-26 10:03:06,564 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #126 recebido com sucesso!
+2024-11-26 10:03:06,564 [INFO] [PACOTE] Mensagem ##127 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,564 [INFO] [STATUS] Total de mensagens recebidas até agora: 129
+2024-11-26 10:03:06,564 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #127 recebido com sucesso!
+2024-11-26 10:03:06,565 [INFO] [PACOTE] Mensagem ##128 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,565 [INFO] [STATUS] Total de mensagens recebidas até agora: 130
+2024-11-26 10:03:06,565 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #128 recebido com sucesso!
+2024-11-26 10:03:06,565 [INFO] [PACOTE] Mensagem ##129 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,565 [INFO] [STATUS] Total de mensagens recebidas até agora: 131
+2024-11-26 10:03:06,565 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #129 recebido com sucesso!
+2024-11-26 10:03:06,566 [INFO] [PACOTE] Mensagem ##130 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,566 [INFO] [STATUS] Total de mensagens recebidas até agora: 132
+2024-11-26 10:03:06,566 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #130 recebido com sucesso!
+2024-11-26 10:03:06,566 [INFO] [PACOTE] Mensagem ##131 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,566 [INFO] [STATUS] Total de mensagens recebidas até agora: 133
+2024-11-26 10:03:06,566 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #131 recebido com sucesso!
+2024-11-26 10:03:06,566 [INFO] [PACOTE] Mensagem ##132 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,566 [INFO] [STATUS] Total de mensagens recebidas até agora: 134
+2024-11-26 10:03:06,566 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #132 recebido com sucesso!
+2024-11-26 10:03:06,567 [INFO] [PACOTE] Mensagem ##133 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,567 [INFO] [STATUS] Total de mensagens recebidas até agora: 135
+2024-11-26 10:03:06,567 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #133 recebido com sucesso!
+2024-11-26 10:03:06,567 [INFO] [PACOTE] Mensagem ##134 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,567 [INFO] [STATUS] Total de mensagens recebidas até agora: 136
+2024-11-26 10:03:06,567 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #134 recebido com sucesso!
+2024-11-26 10:03:06,568 [INFO] [PACOTE] Mensagem ##135 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,568 [INFO] [STATUS] Total de mensagens recebidas até agora: 137
+2024-11-26 10:03:06,568 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #135 recebido com sucesso!
+2024-11-26 10:03:06,568 [INFO] [PACOTE] Mensagem ##136 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,568 [INFO] [STATUS] Total de mensagens recebidas até agora: 138
+2024-11-26 10:03:06,568 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #136 recebido com sucesso!
+2024-11-26 10:03:06,568 [INFO] [PACOTE] Mensagem ##137 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,568 [INFO] [STATUS] Total de mensagens recebidas até agora: 139
+2024-11-26 10:03:06,568 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #137 recebido com sucesso!
+2024-11-26 10:03:06,569 [INFO] [PACOTE] Mensagem ##138 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,569 [INFO] [STATUS] Total de mensagens recebidas até agora: 140
+2024-11-26 10:03:06,569 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #138 recebido com sucesso!
+2024-11-26 10:03:06,569 [INFO] [PACOTE] Mensagem ##139 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,569 [INFO] [STATUS] Total de mensagens recebidas até agora: 141
+2024-11-26 10:03:06,569 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #139 recebido com sucesso!
+2024-11-26 10:03:06,569 [INFO] [PACOTE] Mensagem ##140 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,570 [INFO] [STATUS] Total de mensagens recebidas até agora: 142
+2024-11-26 10:03:06,570 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #140 recebido com sucesso!
+2024-11-26 10:03:06,570 [INFO] [PACOTE] Mensagem ##141 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,570 [INFO] [STATUS] Total de mensagens recebidas até agora: 143
+2024-11-26 10:03:06,570 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #141 recebido com sucesso!
+2024-11-26 10:03:06,570 [INFO] [PACOTE] Mensagem ##142 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,570 [INFO] [STATUS] Total de mensagens recebidas até agora: 144
+2024-11-26 10:03:06,570 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #142 recebido com sucesso!
+2024-11-26 10:03:06,571 [INFO] [PACOTE] Mensagem ##143 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,571 [INFO] [STATUS] Total de mensagens recebidas até agora: 145
+2024-11-26 10:03:06,571 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #143 recebido com sucesso!
+2024-11-26 10:03:06,572 [INFO] [PACOTE] Mensagem ##144 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,572 [INFO] [STATUS] Total de mensagens recebidas até agora: 146
+2024-11-26 10:03:06,572 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #144 recebido com sucesso!
+2024-11-26 10:03:06,572 [INFO] [PACOTE] Mensagem ##145 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,572 [INFO] [STATUS] Total de mensagens recebidas até agora: 147
+2024-11-26 10:03:06,572 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #145 recebido com sucesso!
+2024-11-26 10:03:06,573 [INFO] [PACOTE] Mensagem ##146 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,573 [INFO] [STATUS] Total de mensagens recebidas até agora: 148
+2024-11-26 10:03:06,573 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #146 recebido com sucesso!
+2024-11-26 10:03:06,573 [INFO] [PACOTE] Mensagem ##147 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,573 [INFO] [STATUS] Total de mensagens recebidas até agora: 149
+2024-11-26 10:03:06,573 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #147 recebido com sucesso!
+2024-11-26 10:03:06,573 [INFO] [PACOTE] Mensagem ##148 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,573 [INFO] [STATUS] Total de mensagens recebidas até agora: 150
+2024-11-26 10:03:06,574 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #148 recebido com sucesso!
+2024-11-26 10:03:06,574 [INFO] [PACOTE] Mensagem ##149 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,574 [INFO] [STATUS] Total de mensagens recebidas até agora: 151
+2024-11-26 10:03:06,574 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #149 recebido com sucesso!
+2024-11-26 10:03:06,574 [INFO] [PACOTE] Mensagem ##150 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,574 [INFO] [STATUS] Total de mensagens recebidas até agora: 152
+2024-11-26 10:03:06,574 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #150 recebido com sucesso!
+2024-11-26 10:03:06,575 [INFO] [PACOTE] Mensagem ##151 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,575 [INFO] [STATUS] Total de mensagens recebidas até agora: 153
+2024-11-26 10:03:06,575 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #151 recebido com sucesso!
+2024-11-26 10:03:06,575 [INFO] [PACOTE] Mensagem ##152 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,575 [INFO] [STATUS] Total de mensagens recebidas até agora: 154
+2024-11-26 10:03:06,575 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #152 recebido com sucesso!
+2024-11-26 10:03:06,576 [INFO] [PACOTE] Mensagem ##153 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,576 [INFO] [STATUS] Total de mensagens recebidas até agora: 155
+2024-11-26 10:03:06,576 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #153 recebido com sucesso!
+2024-11-26 10:03:06,576 [INFO] [PACOTE] Mensagem ##154 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,576 [INFO] [STATUS] Total de mensagens recebidas até agora: 156
+2024-11-26 10:03:06,576 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #154 recebido com sucesso!
+2024-11-26 10:03:06,577 [INFO] [PACOTE] Mensagem ##155 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,577 [INFO] [STATUS] Total de mensagens recebidas até agora: 157
+2024-11-26 10:03:06,577 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #155 recebido com sucesso!
+2024-11-26 10:03:06,577 [INFO] [PACOTE] Mensagem ##156 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,577 [INFO] [STATUS] Total de mensagens recebidas até agora: 158
+2024-11-26 10:03:06,577 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #156 recebido com sucesso!
+2024-11-26 10:03:06,577 [INFO] [PACOTE] Mensagem ##157 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,577 [INFO] [STATUS] Total de mensagens recebidas até agora: 159
+2024-11-26 10:03:06,577 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #157 recebido com sucesso!
+2024-11-26 10:03:06,578 [INFO] [PACOTE] Mensagem ##158 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,578 [INFO] [STATUS] Total de mensagens recebidas até agora: 160
+2024-11-26 10:03:06,578 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #158 recebido com sucesso!
+2024-11-26 10:03:06,578 [INFO] [PACOTE] Mensagem ##159 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,578 [INFO] [STATUS] Total de mensagens recebidas até agora: 161
+2024-11-26 10:03:06,578 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #159 recebido com sucesso!
+2024-11-26 10:03:06,579 [INFO] [PACOTE] Mensagem ##160 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,579 [INFO] [STATUS] Total de mensagens recebidas até agora: 162
+2024-11-26 10:03:06,579 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #160 recebido com sucesso!
+2024-11-26 10:03:06,579 [INFO] [PACOTE] Mensagem ##161 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,579 [INFO] [STATUS] Total de mensagens recebidas até agora: 163
+2024-11-26 10:03:06,579 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #161 recebido com sucesso!
+2024-11-26 10:03:06,579 [INFO] [PACOTE] Mensagem ##162 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,579 [INFO] [STATUS] Total de mensagens recebidas até agora: 164
+2024-11-26 10:03:06,580 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #162 recebido com sucesso!
+2024-11-26 10:03:06,580 [INFO] [PACOTE] Mensagem ##163 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,580 [INFO] [STATUS] Total de mensagens recebidas até agora: 165
+2024-11-26 10:03:06,580 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #163 recebido com sucesso!
+2024-11-26 10:03:06,580 [INFO] [PACOTE] Mensagem ##164 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,580 [INFO] [STATUS] Total de mensagens recebidas até agora: 166
+2024-11-26 10:03:06,580 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #164 recebido com sucesso!
+2024-11-26 10:03:06,581 [INFO] [PACOTE] Mensagem ##165 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,581 [INFO] [STATUS] Total de mensagens recebidas até agora: 167
+2024-11-26 10:03:06,581 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #165 recebido com sucesso!
+2024-11-26 10:03:06,581 [INFO] [PACOTE] Mensagem ##166 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,581 [INFO] [STATUS] Total de mensagens recebidas até agora: 168
+2024-11-26 10:03:06,581 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #166 recebido com sucesso!
+2024-11-26 10:03:06,581 [INFO] [PACOTE] Mensagem ##167 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,581 [INFO] [STATUS] Total de mensagens recebidas até agora: 169
+2024-11-26 10:03:06,581 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #167 recebido com sucesso!
+2024-11-26 10:03:06,582 [INFO] [PACOTE] Mensagem ##168 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,582 [INFO] [STATUS] Total de mensagens recebidas até agora: 170
+2024-11-26 10:03:06,582 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #168 recebido com sucesso!
+2024-11-26 10:03:06,582 [INFO] [PACOTE] Mensagem ##169 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,582 [INFO] [STATUS] Total de mensagens recebidas até agora: 171
+2024-11-26 10:03:06,582 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #169 recebido com sucesso!
+2024-11-26 10:03:06,582 [INFO] [PACOTE] Mensagem ##170 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,582 [INFO] [STATUS] Total de mensagens recebidas até agora: 172
+2024-11-26 10:03:06,583 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #170 recebido com sucesso!
+2024-11-26 10:03:06,583 [INFO] [PACOTE] Mensagem ##171 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,583 [INFO] [STATUS] Total de mensagens recebidas até agora: 173
+2024-11-26 10:03:06,583 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #171 recebido com sucesso!
+2024-11-26 10:03:06,583 [INFO] [PACOTE] Mensagem ##172 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,583 [INFO] [STATUS] Total de mensagens recebidas até agora: 174
+2024-11-26 10:03:06,583 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #172 recebido com sucesso!
+2024-11-26 10:03:06,584 [INFO] [PACOTE] Mensagem ##173 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,584 [INFO] [STATUS] Total de mensagens recebidas até agora: 175
+2024-11-26 10:03:06,584 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #173 recebido com sucesso!
+2024-11-26 10:03:06,584 [INFO] [PACOTE] Mensagem ##174 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,584 [INFO] [STATUS] Total de mensagens recebidas até agora: 176
+2024-11-26 10:03:06,584 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #174 recebido com sucesso!
+2024-11-26 10:03:06,584 [INFO] [PACOTE] Mensagem ##175 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,584 [INFO] [STATUS] Total de mensagens recebidas até agora: 177
+2024-11-26 10:03:06,585 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #175 recebido com sucesso!
+2024-11-26 10:03:06,585 [INFO] [PACOTE] Mensagem ##176 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,585 [INFO] [STATUS] Total de mensagens recebidas até agora: 178
+2024-11-26 10:03:06,585 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #176 recebido com sucesso!
+2024-11-26 10:03:06,585 [INFO] [PACOTE] Mensagem ##177 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,585 [INFO] [STATUS] Total de mensagens recebidas até agora: 179
+2024-11-26 10:03:06,585 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #177 recebido com sucesso!
+2024-11-26 10:03:06,586 [INFO] [PACOTE] Mensagem ##178 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,586 [INFO] [STATUS] Total de mensagens recebidas até agora: 180
+2024-11-26 10:03:06,586 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #178 recebido com sucesso!
+2024-11-26 10:03:06,586 [INFO] [PACOTE] Mensagem ##179 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,586 [INFO] [STATUS] Total de mensagens recebidas até agora: 181
+2024-11-26 10:03:06,586 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #179 recebido com sucesso!
+2024-11-26 10:03:06,587 [INFO] [PACOTE] Mensagem ##180 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,587 [INFO] [STATUS] Total de mensagens recebidas até agora: 182
+2024-11-26 10:03:06,587 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #180 recebido com sucesso!
+2024-11-26 10:03:06,587 [INFO] [PACOTE] Mensagem ##181 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,587 [INFO] [STATUS] Total de mensagens recebidas até agora: 183
+2024-11-26 10:03:06,587 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #181 recebido com sucesso!
+2024-11-26 10:03:06,588 [INFO] [PACOTE] Mensagem ##182 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,588 [INFO] [STATUS] Total de mensagens recebidas até agora: 184
+2024-11-26 10:03:06,588 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #182 recebido com sucesso!
+2024-11-26 10:03:06,588 [INFO] [PACOTE] Mensagem ##183 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,588 [INFO] [STATUS] Total de mensagens recebidas até agora: 185
+2024-11-26 10:03:06,588 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #183 recebido com sucesso!
+2024-11-26 10:03:06,589 [INFO] [PACOTE] Mensagem ##184 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,589 [INFO] [STATUS] Total de mensagens recebidas até agora: 186
+2024-11-26 10:03:06,589 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #184 recebido com sucesso!
+2024-11-26 10:03:06,589 [INFO] [PACOTE] Mensagem ##185 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,589 [INFO] [STATUS] Total de mensagens recebidas até agora: 187
+2024-11-26 10:03:06,589 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #185 recebido com sucesso!
+2024-11-26 10:03:06,590 [INFO] [PACOTE] Mensagem ##186 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,590 [INFO] [STATUS] Total de mensagens recebidas até agora: 188
+2024-11-26 10:03:06,590 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #186 recebido com sucesso!
+2024-11-26 10:03:06,590 [INFO] [PACOTE] Mensagem ##187 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,590 [INFO] [STATUS] Total de mensagens recebidas até agora: 189
+2024-11-26 10:03:06,590 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #187 recebido com sucesso!
+2024-11-26 10:03:06,590 [INFO] [PACOTE] Mensagem ##188 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,590 [INFO] [STATUS] Total de mensagens recebidas até agora: 190
+2024-11-26 10:03:06,590 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #188 recebido com sucesso!
+2024-11-26 10:03:06,591 [INFO] [PACOTE] Mensagem ##189 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,591 [INFO] [STATUS] Total de mensagens recebidas até agora: 191
+2024-11-26 10:03:06,591 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #189 recebido com sucesso!
+2024-11-26 10:03:06,591 [INFO] [PACOTE] Mensagem ##190 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,591 [INFO] [STATUS] Total de mensagens recebidas até agora: 192
+2024-11-26 10:03:06,591 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #190 recebido com sucesso!
+2024-11-26 10:03:06,591 [INFO] [PACOTE] Mensagem ##191 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,592 [INFO] [STATUS] Total de mensagens recebidas até agora: 193
+2024-11-26 10:03:06,592 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #191 recebido com sucesso!
+2024-11-26 10:03:06,592 [INFO] [PACOTE] Mensagem ##192 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,592 [INFO] [STATUS] Total de mensagens recebidas até agora: 194
+2024-11-26 10:03:06,592 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #192 recebido com sucesso!
+2024-11-26 10:03:06,592 [INFO] [PACOTE] Mensagem ##193 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,592 [INFO] [STATUS] Total de mensagens recebidas até agora: 195
+2024-11-26 10:03:06,592 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #193 recebido com sucesso!
+2024-11-26 10:03:06,593 [INFO] [PACOTE] Mensagem ##194 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,593 [INFO] [STATUS] Total de mensagens recebidas até agora: 196
+2024-11-26 10:03:06,593 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #194 recebido com sucesso!
+2024-11-26 10:03:06,593 [INFO] [PACOTE] Mensagem ##195 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,593 [INFO] [STATUS] Total de mensagens recebidas até agora: 197
+2024-11-26 10:03:06,593 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #195 recebido com sucesso!
+2024-11-26 10:03:06,593 [INFO] [PACOTE] Mensagem ##196 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,594 [INFO] [STATUS] Total de mensagens recebidas até agora: 198
+2024-11-26 10:03:06,594 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #196 recebido com sucesso!
+2024-11-26 10:03:06,599 [INFO] [PACOTE] Mensagem ##197 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,599 [INFO] [STATUS] Total de mensagens recebidas até agora: 199
+2024-11-26 10:03:06,599 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #197 recebido com sucesso!
+2024-11-26 10:03:06,599 [INFO] [PACOTE] Mensagem ##198 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,600 [INFO] [STATUS] Total de mensagens recebidas até agora: 200
+2024-11-26 10:03:06,600 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #198 recebido com sucesso!
+2024-11-26 10:03:06,600 [INFO] [PACOTE] Mensagem ##199 recebida de ('127.0.0.1', 50778)
+2024-11-26 10:03:06,600 [INFO] [STATUS] Total de mensagens recebidas até agora: 201
+2024-11-26 10:03:06,600 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 50778): Pacote #199 recebido com sucesso!
+2024-11-26 10:29:22,284 [INFO] [SERVIDOR] Encerrado manualmente pelo usuário.
+2024-11-26 10:29:28,651 [INFO] [INICIALIZACAO] Servidor TCP em 127.0.0.1:5002
+2024-11-26 10:29:28,651 [INFO] [INICIALIZACAO] BUFFER_SIZE=1024, LOG_LEVEL=DEBUG
+2024-11-26 10:29:32,629 [INFO] [INICIALIZACAO] Servidor TCP em 127.0.0.1:5002
+2024-11-26 10:29:32,629 [INFO] [INICIALIZACAO] BUFFER_SIZE=1024, LOG_LEVEL=DEBUG
+2024-11-26 10:29:34,824 [INFO] [INICIALIZACAO] Servidor TCP em 127.0.0.1:5002
+2024-11-26 10:29:34,824 [INFO] [INICIALIZACAO] BUFFER_SIZE=1024, LOG_LEVEL=DEBUG
+2024-11-26 10:32:03,159 [INFO] [INICIALIZACAO] Servidor TCP em 127.0.0.1:5002
+2024-11-26 10:32:03,159 [INFO] [INICIALIZACAO] BUFFER_SIZE=1024, LOG_LEVEL=DEBUG
+2024-11-26 10:32:30,811 [INFO] [CONEXAO] Nova conexão de ('127.0.0.1', 45102)
+2024-11-26 10:32:50,123 [INFO] [PACOTE] Mensagem ##0 recebida de ('127.0.0.1', 45102)
+2024-11-26 10:32:50,124 [INFO] [STATUS] Total de mensagens recebidas até agora: 1
+2024-11-26 10:32:50,124 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 45102): Pacote #0 recebido com sucesso!
+2024-11-26 10:35:13,684 [ERROR] [ERRO] Falha ao processar pacote de ('127.0.0.1', 45102): list index out of range
+Traceback (most recent call last):
+  File "/home/herbele/redesII-T1/src/tcp/servidor_tcp.py", line 56, in servidor_tcp
+    numero_do_pacote = dados.decode().split(" ")[1]
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+2024-11-26 10:35:53,473 [INFO] [CONEXAO] Nova conexão de ('127.0.0.1', 36250)
+2024-11-26 10:36:27,916 [ERROR] [ERRO] Falha ao processar pacote de ('127.0.0.1', 36250): list index out of range
+Traceback (most recent call last):
+  File "/home/herbele/redesII-T1/src/tcp/servidor_tcp.py", line 56, in servidor_tcp
+    numero_do_pacote = dados.decode().split(" ")[1]
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+2024-11-26 10:36:29,324 [INFO] [CONEXAO] Nova conexão de ('127.0.0.1', 58388)
+2024-11-26 10:36:30,900 [ERROR] [ERRO] Falha ao processar pacote de ('127.0.0.1', 58388): list index out of range
+Traceback (most recent call last):
+  File "/home/herbele/redesII-T1/src/tcp/servidor_tcp.py", line 56, in servidor_tcp
+    numero_do_pacote = dados.decode().split(" ")[1]
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+2024-11-26 10:36:46,748 [INFO] [SERVIDOR] Encerrado manualmente pelo usuário.
+2024-11-26 10:37:49,314 [INFO] [INICIALIZACAO] Servidor TCP em 127.0.0.1:5002
+2024-11-26 10:37:49,314 [INFO] [INICIALIZACAO] BUFFER_SIZE=1024, LOG_LEVEL=DEBUG
+2024-11-26 10:37:52,726 [INFO] [CONEXAO] Nova conexão de ('127.0.0.1', 56612)
+2024-11-26 10:39:33,589 [ERROR] [ERRO] Falha ao processar pacote de ('127.0.0.1', 56612): list index out of range
+Traceback (most recent call last):
+  File "/home/herbele/redesII-T1/src/tcp/servidor_tcp.py", line 56, in servidor_tcp
+    numero_do_pacote = dados.decode().split(" ")[1]
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range
+2024-11-26 10:39:38,766 [INFO] [CONEXAO] Nova conexão de ('127.0.0.1', 43036)
+2024-11-26 10:40:01,356 [INFO] [PACOTE] Mensagem ##0 recebida de ('127.0.0.1', 43036)
+2024-11-26 10:40:01,356 [INFO] [STATUS] Total de mensagens recebidas até agora: 1
+2024-11-26 10:40:01,357 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 43036): Pacote #0 recebido com sucesso!
+2024-11-26 10:53:13,790 [ERROR] [ERRO] Falha ao processar pacote de ('127.0.0.1', 43036): list index out of range
+Traceback (most recent call last):
+  File "/home/herbele/redesII-T1/src/tcp/servidor_tcp.py", line 56, in servidor_tcp
+    numero_do_pacote = dados.decode().split(" ")[1]
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range

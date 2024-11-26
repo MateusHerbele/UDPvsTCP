@@ -1,4 +1,3 @@
-import logging  # Biblioteca para logging
 import socket  # Biblioteca para comunicação via socket
 import sys
 import os
@@ -6,6 +5,7 @@ import os
 # Adiciona o caminho do diretório 'src' ao sys.path
 sys.path.append(os.path.join(os.path.dirname(__file__), '../'))
 
+from utils.logger import udp_logger as logging  # Usa o logger UDP
 from utils.configs import TIMEOUT
 from utils.metricas import interfaceEnvioUDP
 
@@ -21,9 +21,11 @@ def cliente_udp():
 
         except socket.timeout:
             logging.error(f"[ERRO] Timeout de {TIMEOUT} segundos excedido. O servidor não respondeu.")
+            cliente_socket.close()
 
         except Exception as e:
             logging.error(f"[ERRO] Ocorreu um erro inesperado: {e}", exc_info=True)
+            cliente_socket.close()
 
 if __name__ == "__main__":
     cliente_udp()

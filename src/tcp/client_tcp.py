@@ -1,12 +1,11 @@
-import logging  # Biblioteca para logging
 import socket  # Biblioteca para comunicação via socket
-import time
 import sys
 import os
 
 # Adiciona o caminho do diretório 'src' ao sys.path
 sys.path.append(os.path.join(os.path.dirname(__file__), '../'))
 
+from utils.logger import tcp_logger as logging  # Usa o logger TCP
 from utils.configs import SERVER_IP, TCP_PORT, TIMEOUT
 from utils.metricas import interfaceEnvioTCP
 
@@ -30,12 +29,15 @@ def cliente_tcp():
 
         except socket.timeout:
             logging.error(f"[ERRO] Timeout de {TIMEOUT} segundos excedido. O servidor não respondeu.")
-        
+            cliente_socket.close()
+
         except ConnectionRefusedError as e:
             logging.error(f"[ERRO] Conexão recusada pelo servidor {SERVER_IP}:{TCP_PORT}. Detalhes: {e}", exc_info=True)
+            cliente_socket.close()
 
         except Exception as e:
             logging.error(f"[ERRO] Ocorreu um erro inesperado: {e}", exc_info=True)
+            cliente_socket.close()
 
 
 if __name__ == "__main__":
