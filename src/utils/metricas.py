@@ -38,7 +38,7 @@ def testeTempoEnvioTCP(cliente_socket):
 
 def testeTempoEnvioUDP(cliente_socket):
     logging.info(f"[METRICA] Teste de tempo de envio iniciado")
-    tamanho = int(input("Digite até que tamanho de pacote será enviado. \n Começamos com 0 e aumentamos de 10 em 10 até o valor digitado: "))
+    tamanho = int(input("Digite até que tamanho de pacote será enviado. \nComeçamos com 0 e aumentamos de 10 em 10 até o valor digitado: "))
     # Inicia timer
     # Envia a mensagem para o servidor
     tempo_total = time.time()
@@ -66,7 +66,7 @@ def interfaceEnvioTCP(cliente_socket):
     logging.info(f"[INICIALIZACAO] Interface de envio de pacotes TCP iniciada")
     while True:
         print("Escolha a opão de envio de pacotes")
-        escolha = input("0 - Enviar um pacote \n 1 - Teste de tempo de resposta \n 2 - Teste de vazão \n 3 - Encerrar conexão\n")
+        escolha = input(" 0 - Enviar um pacote \n 1 - Teste de tempo de resposta \n 2 - Teste de vazão \n 3 - Encerrar conexão\n")
 
         if escolha == "0":
             print("Digite a mensagem a ser enviada")
@@ -94,7 +94,7 @@ def interfaceEnvioUDP(cliente_socket):
     logging.info(f"[INICIALIZACAO] Interface de envio de pacotes UDP iniciada")
     while True:
         print("Escolha a opão de envio de pacotes")
-        escolha = input("0 - Enviar um pacote \n 1 - Teste de tempo de resposta \n 2 - Teste de vazão \n 3 - Encerrar sistema\n")
+        escolha = input(" 0 - Enviar um pacote \n 1 - Teste de tempo de resposta \n 2 - Teste de vazão \n 3 - Encerrar sistema\n")
 
         if escolha == "0":
             print("Digite a mensagem a ser enviada")
