@@ -15011,3 +15011,17 @@ Traceback (most recent call last):
     numero_do_pacote = dados.decode().split(" ")[1]
                        ~~~~~~~~~~~~~~~~~~~~~~~~~^^^
 IndexError: list index out of range
+2024-11-26 09:47:24,106 [INFO] [INICIALIZACAO] Servidor TCP em 127.0.0.1:5002
+2024-11-26 09:47:24,106 [INFO] [INICIALIZACAO] BUFFER_SIZE=1024, LOG_LEVEL=DEBUG
+2024-11-26 09:47:36,985 [INFO] [INICIALIZACAO] Servidor TCP em 127.0.0.1:5002
+2024-11-26 09:47:36,985 [INFO] [INICIALIZACAO] BUFFER_SIZE=1024, LOG_LEVEL=DEBUG
+2024-11-26 09:47:42,631 [INFO] [CONEXAO] Nova conexão de ('127.0.0.1', 36034)
+2024-11-26 09:47:46,036 [INFO] [PACOTE] Mensagem ##0 recebida de ('127.0.0.1', 36034)
+2024-11-26 09:47:46,036 [INFO] [STATUS] Total de mensagens recebidas até agora: 1
+2024-11-26 09:47:46,037 [INFO] [RESPOSTA] Enviada para ('127.0.0.1', 36034): Pacote #0 recebido com sucesso!
+2024-11-26 09:57:22,782 [ERROR] [ERRO] Falha ao processar pacote de ('127.0.0.1', 36034): list index out of range
+Traceback (most recent call last):
+  File "/home/herbele/redesII-T1/src/tcp/servidor_tcp.py", line 56, in servidor_tcp
+    numero_do_pacote = dados.decode().split(" ")[1]
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+IndexError: list index out of range

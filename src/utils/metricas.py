@@ -1,13 +1,24 @@
 import logging
 import time
+import os
 from utils.configs import LOG_LEVEL, BUFFER_SIZE, SERVER_IP, TCP_PORT, UDP_PORT
 
+# # Configuração do logging
+# logging.basicConfig(
+#     level=LOG_LEVEL,
+#     format="%(asctime)s [%(levelname)s] %(message)s",
+# )
 # Configuração do logging
+log_file = os.path.join(os.path.dirname(__file__), '../../data/logs/cliente.log')  # Define o arquivo de log
+
 logging.basicConfig(
     level=LOG_LEVEL,
     format="%(asctime)s [%(levelname)s] %(message)s",
+    handlers=[
+        logging.StreamHandler(),  # Log no console
+        logging.FileHandler(log_file, mode='a', encoding='utf-8')  # Log no arquivo
+    ]
 )
-
 
 def criaMensagem(tamanho, i):
     mensagem = f"[PACOTE #{i} " + "N" * (tamanho * 10)+ " FIM]"

@@ -6,20 +6,8 @@ import os
 # Adiciona o caminho do diretório 'src' ao sys.path
 sys.path.append(os.path.join(os.path.dirname(__file__), '../'))
 
-from utils.configs import SERVER_IP, UDP_PORT, BUFFER_SIZE, TIMEOUT, LOG_LEVEL
+from utils.configs import TIMEOUT
 from utils.metricas import interfaceEnvioUDP
-
-# Configuração do logging
-log_file = os.path.join(os.path.dirname(__file__), '../../data/logs/cliente_udp.log')  # Define o arquivo de log
-
-logging.basicConfig(
-    level=LOG_LEVEL,
-    format="%(asctime)s [%(levelname)s] %(message)s",
-    handlers=[
-        logging.StreamHandler(),  # Log no console
-        logging.FileHandler(log_file, mode='a', encoding='utf-8')  # Log no arquivo
-    ]
-)
 
 def cliente_udp():
     logging.info(f"[INICIALIZACAO] Cliente UDP iniciado com TIMEOUT={TIMEOUT}s")
