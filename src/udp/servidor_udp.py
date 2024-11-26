@@ -38,10 +38,12 @@ def servidor_udp():
                 # Verifica se a mensagem é o comando de término
                 if mensagem == "FIM":
                     logging.info(f"[ENCERRAMENTO] Conexão encerrada com {endereco_cliente}")
-                    logging.info(f"[STATUS] Total de pacotes recebidos: {i}")
-                    #servidor_socket.sendto(f"Conexão encerrada.\nNúmero de pacotes recebidos: {i}".encode(), endereco_cliente)                    
-                    servidor_socket.close()
-                    break
+                    i += 1 
+                    if i == 1:
+                        logging.info(f"[STATUS] Total de pacotes recebidos: apenas pacote FIM")
+                    else:
+                        logging.info(f"[STATUS] Total de pacotes recebidos: {i}")
+                    continue
 
                 # Incrementa o contador de pacotes e responde
                 numero_do_pacote = mensagem.split(" ")[1] if " " in mensagem else str(i)

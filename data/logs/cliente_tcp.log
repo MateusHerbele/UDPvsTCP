@@ -1,6 +1,0 @@
-2024-11-26 10:39:38,766 [INFO] [INICIALIZACAO] Cliente TCP iniciado com TIMEOUT=30s
-2024-11-26 10:39:38,766 [INFO] [CONEXAO] Tentando conectar ao servidor 127.0.0.1:5002
-2024-11-26 10:39:38,766 [INFO] [CONEXAO] Conexão estabelecida com 127.0.0.1:5002
-2024-11-26 10:39:38,766 [INFO] [INICIALIZACAO] Interface de envio de pacotes TCP iniciada
-2024-11-26 10:40:01,356 [INFO] [PACOTE] Mensagem enviada para 127.0.0.1: [PACOTE #0 aaa FIM]
-2024-11-26 10:40:01,357 [INFO] [PACOTE] Resposta de 127.0.0.1: Pacote #0 recebido com sucesso!
