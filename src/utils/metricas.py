@@ -21,33 +21,6 @@ from utils.logger import tcp_logger, udp_logger
 #         logging.FileHandler(log_file, mode='a', encoding='utf-8')  # Log no arquivo
 #     ]
 # )
-
-def setup_logger(name, log_file, level=logging.INFO):
-    """
-    Cria e configura um logger com um arquivo de log específico.
-    :param name: Nome do logger.
-    :param log_file: Caminho do arquivo de log.
-    :param level: Nível de log.
-    :return: Logger configurado.
-    """
-    logger = logging.getLogger(name)
-    logger.setLevel(level)
-
-    # Formato do log
-    formatter = logging.Formatter("%(asctime)s [%(levelname)s] %(message)s")
-
-    # Handlers para o arquivo e console
-    file_handler = logging.FileHandler(log_file, mode='a', encoding='utf-8')
-    file_handler.setFormatter(formatter)
-    stream_handler = logging.StreamHandler()
-    stream_handler.setFormatter(formatter)
-
-    # Adicionar handlers ao logger
-    logger.addHandler(file_handler)
-    logger.addHandler(stream_handler)
-
-    return logger
-
 def criaMensagem(tamanho, i):
     mensagem = f"[PACOTE #{i} " + "N" * (tamanho * 10)+ " FIM]"
     return mensagem
