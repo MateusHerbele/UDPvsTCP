@@ -8,6 +8,29 @@ def criaMensagem(i):
     mensagem = f"[PACOTE #{i} " + "N" * (i * 10)+ " FIM]"
     return mensagem
 
+def criaMensagemPadrao(i):
+    mensagemPadrao = f"[PACOTE #{i} " + "P" * 1008 + " FIM]"
+    return mensagemPadrao
+
+def explosaoDePacotes(cliente_socket, tamanho, protocolo):
+    if protocolo == "TCP":
+        for i in range(tamanho):
+            mensagem = criaMensagemPadrao(i)
+            cliente_socket.send(mensagem.encode())
+            tcp_logger.info(f"[PACOTE] Mensagem {i} enviada para {SERVER_IP}:{TCP_PORT}: {mensagem}. QTD_BYTES: {len(mensagem)}")
+            resposta = cliente_socket.recv(BUFFER_SIZE)
+            tcp_logger.info(f"[PACOTE] Resposta de {SERVER_IP}: {resposta.decode()}")
+    else:
+        for i in range(tamanho):
+            mensagem = criaMensagemPadrao(i)
+            cliente_socket.sendto(mensagem.encode(), (SERVER_IP, UDP_PORT))
+            udp_logger.info(f"[PACOTE] Mensagem {i} enviada para {SERVER_IP}:{UDP_PORT}: {mensagem}. QTD_BYTES: {len(mensagem)}")
+            resposta, _ = cliente_socket.recvfrom(BUFFER_SIZE)
+            udp_logger.info(f"[PACOTE] Resposta de {SERVER_IP}: {resposta}")
+            
+
+        
+
 def testeTempoEnvioTCP(cliente_socket):
     tcp_logger.info(f"[METRICA] Teste de tempo de envio iniciado")
     tamanho = int(input("Digite até que tamanho de pacote será enviado. \n Começamos com 0 e aumentamos de 10 em 10 até o valor digitado: "))
@@ -19,7 +42,7 @@ def testeTempoEnvioTCP(cliente_socket):
         tcp_logger.info(f"[METRICA] Tamanho da mensagem {i}: {len(mensagem)}")
         inicio = time.time()
         cliente_socket.send(mensagem.encode())
-        tcp_logger.info(f"[PACOTE] Mensagem {i} enviada para {SERVER_IP}:{TCP_PORT}: {mensagem}")
+        tcp_logger.info(f"[PACOTE] Mensagem {i} enviada para {SERVER_IP}:{TCP_PORT}: {mensagem}. QTD_BYTES: {len(mensagem)}")
 
         # Recebe a resposta do servidor
         resposta = cliente_socket.recv(BUFFER_SIZE)
@@ -34,7 +57,7 @@ def testeTempoEnvioTCP(cliente_socket):
 
 
 def calculaVazaoUDP(tamanho, vetor_confirmacao, tempo_total):
-    # Número de bytes de dados (payload do protocola da aplicação) transferidos com sucesso
+    # Número de bytes de dados (payload do protocolo da aplicação) transferidos com sucesso
     numero_de_bytes = 0
     for i in range(tamanho):
         if vetor_confirmacao[i] == True:
@@ -64,7 +87,7 @@ def testeTempoEnvioUDP(cliente_socket):
         udp_logger.info(f"[METRICA] Tamanho da mensagem {i}: {len(mensagem)}")
         inicio = time.time()
         cliente_socket.sendto(mensagem.encode(), (SERVER_IP, UDP_PORT))
-        udp_logger.info(f"[PACOTE] Mensagem {i} enviada para {SERVER_IP}:{UDP_PORT}: {mensagem}")
+        udp_logger.info(f"[PACOTE] Mensagem {i} enviada para {SERVER_IP}:{UDP_PORT}: {mensagem}. QTD_BYTES: {len(mensagem)}")
 
         # Recebe a resposta do servidor
         resposta, _ = cliente_socket.recvfrom(BUFFER_SIZE)
@@ -88,7 +111,7 @@ def interfaceEnvioTCP(cliente_socket):
     tcp_logger.info(f"[INICIALIZACAO] Interface de envio de pacotes TCP iniciada")
     while True:
         print("Escolha a opão de envio de pacotes")
-        escolha = input(" 0 - Enviar um pacote \n 1 - Teste de tempo de resposta e vazão \n 2 - Encerrar sistema\n")
+        escolha = input(" 0 - Enviar um pacote \n 1 - Teste de tempo de resposta e vazão \n 2 - Mandar um número arbitrário de pacotes com carga padrão (1024 Bytes) \n 3 - Encerrar sistema\n")
 
         if escolha == "0":
             print("Digite a mensagem a ser enviada")
@@ -97,7 +120,7 @@ def interfaceEnvioTCP(cliente_socket):
             cliente_socket.send(mensagem.encode())
 
             #tcp_logger.info(f"Mensagem enviada para {SERVER_IP}: {mensagem}")
-            tcp_logger.info(f"[PACOTE] Mensagem enviada para {SERVER_IP}: {mensagem}")
+            tcp_logger.info(f"[PACOTE] Mensagem enviada para {SERVER_IP}: {mensagem}. QTD_BYTES: {len(mensagem)}")
 
             resposta = cliente_socket.recv(BUFFER_SIZE)
             #tcp_logger.info(f"Resposta de {SERVER_IP}: {resposta.decode()}")
@@ -105,22 +128,22 @@ def interfaceEnvioTCP(cliente_socket):
 
         elif escolha == "1":
             testeTempoEnvioTCP(cliente_socket)
+        elif escolha == "2":
+            tamanho = int(input("Digite o número de pacotes a serem enviados: "))
+            explosaoDePacotes(cliente_socket, tamanho, "TCP")
         elif escolha == "3" or KeyboardInterrupt:
             #tcp_logger.info("Encerrando conexão com o servidor TCP")
             tcp_logger.info(f"[ENCERRAMENTO] Conexão encerrada com o servidor TCP")
             cliente_socket.send(b"FIM")
             cliente_socket.close()    
+            exit()
             break
-
-
-def enviosConfirmadosUDP():
-    pass
 
 def interfaceEnvioUDP(cliente_socket):
     udp_logger.info(f"[INICIALIZACAO] Interface de envio de pacotes UDP iniciada")
     while True:
         print("Escolha a opão de envio de pacotes")
-        escolha = input(" 0 - Enviar um pacote \n 1 - Teste de tempo de resposta e vazão \n 2 - Encerrar sistema\n")
+        escolha = input(" 0 - Enviar um pacote \n 1 - Teste de tempo de resposta e vazão \n 2 - Mandar um número arbitrário de pacotes com carga padrão (~1024 Bytes) \n 3 - Encerrar sistema\n")
 
         if escolha == "0":
             print("Digite a mensagem a ser enviada")
@@ -129,7 +152,7 @@ def interfaceEnvioUDP(cliente_socket):
             cliente_socket.sendto(mensagem.encode(), (SERVER_IP, UDP_PORT))
 
             #udp_logger.info(f"Mensagem enviada para {SERVER_IP}: {mensagem}")
-            udp_logger.info(f"[PACOTE] Mensagem enviada para {SERVER_IP}: {mensagem}")
+            udp_logger.info(f"[PACOTE] Mensagem enviada para {SERVER_IP}: {mensagem}. QTD_BYTES: {len(mensagem)}")
 
             resposta, _ = cliente_socket.recvfrom(BUFFER_SIZE)
             #udp_logger.info(f"Resposta de {SERVER_IP}: {resposta}")
@@ -137,7 +160,11 @@ def interfaceEnvioUDP(cliente_socket):
 
         elif escolha == "1":
             testeTempoEnvioUDP(cliente_socket)
-        elif escolha == "2" or KeyboardInterrupt:
+
+        elif escolha == "2":
+            tamanho = int(input("Digite o número de pacotes a serem enviados: "))
+            explosaoDePacotes(cliente_socket, tamanho, "UDP")
+        elif escolha == "3" or KeyboardInterrupt:
             #udp_logger.info("Encerrando o sistema de envio de pacotes UDP")
             udp_logger.info(f"[ENCERRAMENTO] Envio de pacotes UDP")
             cliente_socket.sendto(b"FIM", (SERVER_IP, UDP_PORT))

@@ -7,7 +7,7 @@ UDP_PORT = 5001          # Porta para o servidor UDP
 TCP_PORT = 5002          # Porta para o servidor TCP
 
 # Tamanhos do buffer
-BUFFER_SIZE = 1024       # Tamanho do buffer para recepção/envio
+BUFFER_SIZE = 8000       # Tamanho do buffer para recepção/envio
 
 # Outras configurações
 TIMEOUT = 30              # Timeout para conexões (em segundos)
