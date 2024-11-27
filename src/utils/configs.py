@@ -2,7 +2,7 @@
 # Configurações gerais do projeto
 
 # Configurações de rede
-SERVER_IP = "127.0.0.1"  # IP do servidor (localhost para testes)
+SERVER_IP = "10.254.221.45"  # IP do servidor (localhost para testes)
 UDP_PORT = 5001          # Porta para o servidor UDP
 TCP_PORT = 5002          # Porta para o servidor TCP
 

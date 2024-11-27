@@ -17,14 +17,14 @@ def cliente_tcp():
     while True:
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as cliente_socket:
             try:
-                logging.info(f"[CONEXAO] Tentando conectar ao servidor {SERVER_IP}:{TCP_PORT}")
+                logging.info(f"[CONEXAO] Tentando conectar ao servidor {SERVER_IP}:{TCP_PORT}.")
 
                 # Configura timeout para o socket
                 cliente_socket.settimeout(TIMEOUT)
 
                 # Conecta ao servidor
                 cliente_socket.connect((SERVER_IP, TCP_PORT))
-                logging.info(f"[CONEXAO] Conexão estabelecida com {SERVER_IP}:{TCP_PORT}")
+                logging.info(f"[CONEXAO] Conexão estabelecida com {SERVER_IP}:{TCP_PORT}.")
 
                 # Interface de envio TCP
                 interfaceEnvioTCP(cliente_socket)

@@ -26,7 +26,6 @@ def servidor_tcp():
 
     # Criação do socket TCP
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as servidor_socket:
-        # Associa o socket a um endereço e porta
         servidor_socket.bind((SERVER_IP, TCP_PORT))
         servidor_socket.listen()
 
@@ -35,34 +34,46 @@ def servidor_tcp():
                 # Aceita a conexão do cliente
                 cliente, endereco_cliente = servidor_socket.accept()
                 logging.info(f"[CONEXAO] Nova conexão de {endereco_cliente}")
-                i = 0 # Contador de mensagens
-                # Recebe a mensagem do cliente
-                while(True):
+                buffer_recebido = ""  # Buffer para armazenar os dados recebidos
+                i = 0  # Contador de mensagens
+                
+                while True:
                     try:
-                        dados = b""
-                        while True:
-                            parte = cliente.recv(BUFFER_SIZE)
-                            #print("parte: " + parte.decode()) COMENTEI PRA VER COMO FICOU A SAIDA DO LOG
-                            dados += parte
-                            if len(parte) < BUFFER_SIZE:
-                                break
-                        
-                        # Fecha a conexão com o cliente após a resposta
-                        if dados.decode() == "FIM":
-                            logging.info(f"[ENCERRAMENTO] Conexão encerrada com {endereco_cliente}")
+                        # Recebe uma parte da mensagem
+                        parte = cliente.recv(BUFFER_SIZE).decode()
+                        if not parte:  # Conexão foi fechada pelo cliente
+                            logging.info(f"[ENCERRAMENTO] Conexão encerrada por {endereco_cliente}")
                             cliente.close()
                             break
+                        
+                        # Adiciona a parte recebida ao buffer
+                        buffer_recebido += parte
+                        
+                        # Verifica se a mensagem completa foi recebida
+                        if "FIM]" in buffer_recebido:
+                            # Processa a mensagem completa até o delimitador
+                            mensagens = buffer_recebido.split("FIM]")
+                            for mensagem in mensagens[:-1]:  # Todas as mensagens completas
+                                mensagem_completa = mensagem.strip()
+                                if mensagem_completa:
+                                    i += 1
+                                    logging.info(f"[PACOTE] Mensagem recebida de {endereco_cliente}, tamanho: {len(mensagem)}.")
+                                    logging.info(f"[STATUS] Total de mensagens recebidas até agora: {i}")
+                                    
+                                    # Extrai o número do pacote (assumindo o formato correto)
+                                    try:
+                                        numero_do_pacote = mensagem_completa.split(" ")[1].strip("#")
+                                    except IndexError:
+                                        numero_do_pacote = "desconhecido"
+                                        logging.warning(f"[FORMATO INVALIDO] Mensagem malformada")
+                                    
+                                    # Envia resposta ao cliente
+                                    resposta = f"Pacote {numero_do_pacote} recebido com sucesso!"
+                                    cliente.send(resposta.encode())
+                                    logging.info(f"[RESPOSTA] Enviada para {endereco_cliente}: {resposta}")
                             
-                        numero_do_pacote = dados.decode().split(" ")[1]
-                        #logging.debug(f"Mensagem {numero_do_pacote} recebida de {endereco_cliente}: {dados.decode()}") COMENTEI PRA VER COMO FICOU A SAIDA DO LOG
-                        logging.info(f"[PACOTE] Mensagem #{numero_do_pacote} recebida de {endereco_cliente}")
-                        i += 1
-                        logging.info(f"[STATUS] Total de mensagens recebidas até agora: {i}")
-
-                        # Envia uma resposta para o cliente
-                        resposta = f"Pacote {numero_do_pacote} recebido com sucesso!"
-                        cliente.send(resposta.encode())
-                        logging.info(f"[RESPOSTA] Enviada para {endereco_cliente}: {resposta}")
+                            # Retém apenas a parte não processada do buffer
+                            buffer_recebido = mensagens[-1]
                     except Exception as e:
                         logging.error(f"[ERRO] Falha ao processar pacote de {endereco_cliente}: {e}", exc_info=True)
                         break
@@ -73,6 +84,7 @@ def servidor_tcp():
             except Exception as e:
                 logging.error(f"[ERRO CRITICO] O servidor encontrou um erro: {e}", exc_info=True)
                 break
+
 
 if __name__ == "__main__":
     servidor_tcp()

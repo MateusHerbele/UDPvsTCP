@@ -17,7 +17,7 @@ def explosaoDePacotes(cliente_socket, quantidade, protocolo):
         for i in range(quantidade):
             mensagem = criaMensagemPadrao(i)
             cliente_socket.send(mensagem.encode())
-            tcp_logger.info(f"[PACOTE] Mensagem {i} enviada para {SERVER_IP}:{TCP_PORT}: {mensagem}. QTD_BYTES: {len(mensagem)}")
+            tcp_logger.info(f"[PACOTE] Mensagem {i} enviada para {SERVER_IP}:{TCP_PORT}. tamanho: {len(mensagem)}")
             resposta = cliente_socket.recv(BUFFER_SIZE)
             tcp_logger.info(f"[PACOTE] Resposta de {SERVER_IP}: {resposta.decode()}")
     else:
@@ -25,7 +25,7 @@ def explosaoDePacotes(cliente_socket, quantidade, protocolo):
         for i in range(quantidade):
             mensagem = criaMensagemPadrao(i)
             cliente_socket.sendto(mensagem.encode(), (SERVER_IP, UDP_PORT))
-            udp_logger.info(f"[PACOTE] Mensagem {i} enviada para {SERVER_IP}:{UDP_PORT}: {mensagem}. QTD_BYTES: {len(mensagem)}")
+            udp_logger.info(f"[PACOTE] Mensagem {i} enviada para {SERVER_IP}:{UDP_PORT}. tamanho: {len(mensagem)}")
             resposta, _ = cliente_socket.recvfrom(BUFFER_SIZE)
             confirmacao = resposta.decode().split(" ")[1]
             confirmacao = int(confirmacao[1:])
@@ -47,7 +47,7 @@ def testeTempoEnvioTCP(cliente_socket):
         tcp_logger.info(f"[METRICA] Tamanho da mensagem {i}: {len(mensagem)}")
         inicio = time.time()
         cliente_socket.send(mensagem.encode())
-        tcp_logger.info(f"[PACOTE] Mensagem {i} enviada para {SERVER_IP}:{TCP_PORT}: {mensagem}. QTD_BYTES: {len(mensagem)}")
+        tcp_logger.info(f"[PACOTE] Mensagem {i} enviada para {SERVER_IP}:{TCP_PORT}. tamanho: {len(mensagem)}")
 
         # Recebe a resposta do servidor
         resposta = cliente_socket.recv(BUFFER_SIZE)
@@ -92,7 +92,7 @@ def testeTempoEnvioUDP(cliente_socket):
         udp_logger.info(f"[METRICA] Tamanho da mensagem {i}: {len(mensagem)}")
         inicio = time.time()
         cliente_socket.sendto(mensagem.encode(), (SERVER_IP, UDP_PORT))
-        udp_logger.info(f"[PACOTE] Mensagem {i} enviada para {SERVER_IP}:{UDP_PORT}: {mensagem}. QTD_BYTES: {len(mensagem)}")
+        udp_logger.info(f"[PACOTE] Mensagem {i} enviada para {SERVER_IP}:{UDP_PORT}. tamanho: {len(mensagem)}")
 
         # Recebe a resposta do servidor
         resposta, _ = cliente_socket.recvfrom(BUFFER_SIZE)
@@ -126,7 +126,7 @@ def interfaceEnvioTCP(cliente_socket):
             cliente_socket.send(mensagem.encode())
 
             #tcp_logger.info(f"Mensagem enviada para {SERVER_IP}: {mensagem}")
-            tcp_logger.info(f"[PACOTE] Mensagem enviada para {SERVER_IP}: {mensagem}. QTD_BYTES: {len(mensagem)}")
+            tcp_logger.info(f"[PACOTE] Mensagem enviada para {SERVER_IP}. tamanho: {len(mensagem)}")
 
             resposta = cliente_socket.recv(BUFFER_SIZE)
             #tcp_logger.info(f"Resposta de {SERVER_IP}: {resposta.decode()}")
@@ -158,7 +158,7 @@ def interfaceEnvioUDP(cliente_socket):
             cliente_socket.sendto(mensagem.encode(), (SERVER_IP, UDP_PORT))
 
             #udp_logger.info(f"Mensagem enviada para {SERVER_IP}: {mensagem}")
-            udp_logger.info(f"[PACOTE] Mensagem enviada para {SERVER_IP}: {mensagem}. QTD_BYTES: {len(mensagem)}")
+            udp_logger.info(f"[PACOTE] Mensagem enviada para {SERVER_IP}. tamanho: {len(mensagem)}")
 
             resposta, _ = cliente_socket.recvfrom(BUFFER_SIZE)
             #udp_logger.info(f"Resposta de {SERVER_IP}: {resposta}")
