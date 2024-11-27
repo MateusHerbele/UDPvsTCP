@@ -107,7 +107,7 @@ def testeTempoEnvioUDP(cliente_socket):
         RTT = (time.time() - inicio) * 1000 
         udp_logger.info(f"[METRICA] Tempo p/ resposta do servidor: {RTT}ms")
     tempo_total = (time.time() - tempo_total) * 1000
-    udp_logger.info(f"[METRICA] Teste de explosão de pacotes finalizado. Pacotes confirmados: {vetor_confirmacao.count(True)}")
+    udp_logger.info(f"[METRICA] Pacotes confirmados: {vetor_confirmacao.count(True)}")
     udp_logger.info(f"[METRICA] Tempo total de envio de todos os pacotes enviados: {tempo_total}ms")
     calculaVazaoUDP(tamanho, vetor_confirmacao, tempo_total)
 # definir as métricas de avaliação da rede
