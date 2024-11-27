@@ -12,21 +12,26 @@ def criaMensagemPadrao(i):
     mensagemPadrao = f"[PACOTE #{i} " + "P" * 1008 + " FIM]"
     return mensagemPadrao
 
-def explosaoDePacotes(cliente_socket, tamanho, protocolo):
+def explosaoDePacotes(cliente_socket, quantidade, protocolo):
     if protocolo == "TCP":
-        for i in range(tamanho):
+        for i in range(quantidade):
             mensagem = criaMensagemPadrao(i)
             cliente_socket.send(mensagem.encode())
             tcp_logger.info(f"[PACOTE] Mensagem {i} enviada para {SERVER_IP}:{TCP_PORT}: {mensagem}. QTD_BYTES: {len(mensagem)}")
             resposta = cliente_socket.recv(BUFFER_SIZE)
             tcp_logger.info(f"[PACOTE] Resposta de {SERVER_IP}: {resposta.decode()}")
     else:
-        for i in range(tamanho):
+        vetor_confirmacao = [False] * quantidade # Matriz de confirmação de envio
+        for i in range(quantidade):
             mensagem = criaMensagemPadrao(i)
             cliente_socket.sendto(mensagem.encode(), (SERVER_IP, UDP_PORT))
             udp_logger.info(f"[PACOTE] Mensagem {i} enviada para {SERVER_IP}:{UDP_PORT}: {mensagem}. QTD_BYTES: {len(mensagem)}")
             resposta, _ = cliente_socket.recvfrom(BUFFER_SIZE)
+            confirmacao = resposta.decode().split(" ")[1]
+            confirmacao = int(confirmacao[1:])
+            vetor_confirmacao[confirmacao] = True
             udp_logger.info(f"[PACOTE] Resposta de {SERVER_IP}: {resposta}")
+        udp_logger.info(f"[METRICA] Teste de explosão de pacotes finalizado. Pacotes confirmados: {vetor_confirmacao.count(True)}")
             
 
         
@@ -102,6 +107,7 @@ def testeTempoEnvioUDP(cliente_socket):
         RTT = (time.time() - inicio) * 1000 
         udp_logger.info(f"[METRICA] Tempo p/ resposta do servidor: {RTT}ms")
     tempo_total = (time.time() - tempo_total) * 1000
+    udp_logger.info(f"[METRICA] Teste de explosão de pacotes finalizado. Pacotes confirmados: {vetor_confirmacao.count(True)}")
     udp_logger.info(f"[METRICA] Tempo total de envio de todos os pacotes enviados: {tempo_total}ms")
     calculaVazaoUDP(tamanho, vetor_confirmacao, tempo_total)
 # definir as métricas de avaliação da rede
