@@ -48,7 +48,7 @@ def servidor_udp():
                 # Incrementa o contador de pacotes e responde
                 numero_do_pacote = mensagem.split(" ")[1] if " " in mensagem else str(i)
                 #logging.debug(f"Mensagem {numero_do_pacote} recebida de {endereco_cliente}: {dados.decode()}")
-                logging.info(f"[PACOTE] Mensagem #{numero_do_pacote} recebida de {endereco_cliente}")
+                logging.info(f"[PACOTE] Mensagem #{numero_do_pacote} recebida de {endereco_cliente}, tamanho: {len(mensagem)}.")
                 i += 1
                 logging.info(f"[STATUS] Total de mensagens recebidas até agora: {i}")
                 
