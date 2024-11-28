@@ -1,7 +1,7 @@
 import logging
 import time
 import os
-from utils.configs import LOG_LEVEL, BUFFER_SIZE, SERVER_IP, TCP_PORT, UDP_PORT
+from utils.configs import BUFFER_SIZE, SERVER_IP, TCP_PORT, UDP_PORT
 from utils.logger import tcp_logger, udp_logger
 
 def criaMensagem(i):
@@ -13,6 +13,7 @@ def criaMensagemPadrao(i):
     return mensagemPadrao
 
 def explosaoDePacotes(cliente_socket, quantidade, protocolo):
+    inicio = time.time()
     if protocolo == "TCP":
         for i in range(quantidade):
             mensagem = criaMensagemPadrao(i)
@@ -20,6 +21,8 @@ def explosaoDePacotes(cliente_socket, quantidade, protocolo):
             tcp_logger.info(f"[PACOTE] Mensagem {i} enviada para {SERVER_IP}:{TCP_PORT}. tamanho: {len(mensagem)}")
             resposta = cliente_socket.recv(BUFFER_SIZE)
             tcp_logger.info(f"[PACOTE] Resposta de {SERVER_IP}: {resposta.decode()}")
+        tempo_total = (time.time() - inicio) * 1000
+        tcp_logger.info(f"[METRICA] Tempo total de envio de todos os pacotes enviados: {tempo_total}ms")
     else:
         vetor_confirmacao = [False] * quantidade # Matriz de confirmação de envio
         for i in range(quantidade):
@@ -32,6 +35,8 @@ def explosaoDePacotes(cliente_socket, quantidade, protocolo):
             vetor_confirmacao[confirmacao] = True
             udp_logger.info(f"[PACOTE] Resposta de {SERVER_IP}: {resposta}")
         udp_logger.info(f"[METRICA] Teste de explosão de pacotes finalizado. Pacotes confirmados: {vetor_confirmacao.count(True)}")
+        tcp_logger.info(f"[METRICA] Tempo total de envio de todos os pacotes enviados: {tempo_total}ms")
+
             
 
         
