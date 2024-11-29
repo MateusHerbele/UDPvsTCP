@@ -15,7 +15,7 @@ def criaMensagemPadrao(i):
     return mensagemPadrao
 
 # Teste de explosão de pacotes que consiste em enviar uma quantidade abrupta de pacotes para o servidor
-def explosaoDePacotes(cliente_socket, quantidade, protocolo):
+def testeAltaCarga(cliente_socket, quantidade, protocolo):
     inicio = time.time()
     if protocolo == "TCP":
         for i in range(quantidade):
@@ -127,7 +127,7 @@ def interfaceEnvioTCP(cliente_socket):
     tcp_logger.info(f"[INICIALIZACAO] Interface de envio de pacotes TCP iniciada")
     while True:
         print("Escolha a opão de envio de pacotes")
-        escolha = input(" 0 - Enviar um pacote \n 1 - Teste de tempo de resposta e vazão \n 2 - Mandar um número arbitrário de pacotes com carga padrão (1024 Bytes) \n 3 - Encerrar sistema\n")
+        escolha = input(" 0 - Enviar um pacote \n 1 - Teste de tempo de resposta e vazão \n 2 - Teste de Alta Carga - Mandar um número arbitrário de pacotes com carga padrão (~1024 Bytes) \n 3 - Encerrar sistema\n")
 
         if escolha == "0":
             print("Digite a mensagem a ser enviada")
@@ -144,7 +144,7 @@ def interfaceEnvioTCP(cliente_socket):
             testeTempoEnvioTCP(cliente_socket)
         elif escolha == "2":
             tamanho = int(input("Digite o número de pacotes a serem enviados: "))
-            explosaoDePacotes(cliente_socket, tamanho, "TCP")
+            testeAltaCarga(cliente_socket, tamanho, "TCP")
         elif escolha == "3" or KeyboardInterrupt:
             tcp_logger.info(f"[ENCERRAMENTO] Conexão encerrada com o servidor TCP")
             cliente_socket.send(b"FIM")
@@ -156,7 +156,7 @@ def interfaceEnvioUDP(cliente_socket):
     udp_logger.info(f"[INICIALIZACAO] Interface de envio de pacotes UDP iniciada")
     while True:
         print("Escolha a opão de envio de pacotes")
-        escolha = input(" 0 - Enviar um pacote \n 1 - Teste de tempo de resposta e vazão \n 2 - Mandar um número arbitrário de pacotes com carga padrão (~1024 Bytes) \n 3 - Encerrar sistema\n")
+        escolha = input(" 0 - Enviar um pacote \n 1 - Teste de tempo de resposta e vazão \n 2 - Teste de Alta Carga - Mandar um número arbitrário de pacotes com carga padrão (~1024 Bytes) \n 3 - Encerrar sistema\n")
 
         if escolha == "0":
             print("Digite a mensagem a ser enviada")
@@ -174,7 +174,7 @@ def interfaceEnvioUDP(cliente_socket):
 
         elif escolha == "2":
             tamanho = int(input("Digite o número de pacotes a serem enviados: "))
-            explosaoDePacotes(cliente_socket, tamanho, "UDP")
+            testeAltaCarga(cliente_socket, tamanho, "UDP")
         elif escolha == "3" or KeyboardInterrupt:
             udp_logger.info(f"[ENCERRAMENTO] Envio de pacotes UDP")
             cliente_socket.sendto(b"FIM", (SERVER_IP, UDP_PORT))
