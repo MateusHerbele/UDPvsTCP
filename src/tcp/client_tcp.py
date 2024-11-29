@@ -26,7 +26,7 @@ def cliente_tcp():
                 cliente_socket.connect((SERVER_IP, TCP_PORT))
                 logging.info(f"[CONEXAO] Conexão estabelecida com {SERVER_IP}:{TCP_PORT}.")
 
-                # Interface de envio TCP
+                # Entra na interface de envio de mensagens
                 interfaceEnvioTCP(cliente_socket)
 
             except socket.timeout:

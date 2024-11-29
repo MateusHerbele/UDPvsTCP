@@ -16,7 +16,7 @@ def cliente_udp():
         try:
             # Configura timeout para o socket
             cliente_socket.settimeout(TIMEOUT)
-            # Envia a mensagem para o servidor
+            # Entra na interface de envio de mensagens
             interfaceEnvioUDP(cliente_socket)
 
         except socket.timeout:
