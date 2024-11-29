@@ -5,6 +5,7 @@ Este projeto realiza uma comparação de desempenho entre os protocolos UDP e TC
 ## Estrutura do Projeto
 
 A estrutura do diretório é organizada da seguinte forma:
+```
 UDPvsTCP/
 ├── data/
 │   ├── logs/
@@ -37,7 +38,7 @@ UDPvsTCP/
 │       └── metrics.py
 ├── README.md
 └── .gitignore
-
+```
 
 ## Como Executar
 
