@@ -5,8 +5,38 @@ Este projeto realiza uma comparação de desempenho entre os protocolos UDP e TC
 ## Estrutura do Projeto
 
 A estrutura do diretório é organizada da seguinte forma:
-
-UDPvsTCP/ ├── data/ │ ├── logs/ │ │ ├── cliente_tcp.log │ │ ├── cliente_udp.log │ │ ├── servidor_tcp.log │ │ └── servidor_udp.log │ └── resultados/ │ ├── cliente_tcp_tamanho_tempo.png │ ├── cliente_udp_tamanho_tempo.png │ ├── comparacao_pacotes_efetivos.png │ ├── comparacao_tempo_total.png │ └── comparacao_vazao.png ├── scripts/ │ ├── cliente_tempo_medio.py │ ├── comp_pacotes_enviados.py │ ├── comp_tempo_total_10m.py │ ├── comp_vazao.py │ └── cut.py ├── src/ │ ├── tcp/ │ │ ├── client.py │ │ └── servidor_tcp.py │ ├── udp/ │ │ ├── cliente_udp.py │ │ └── servidor_udp.py │ └── utils/ │ ├── configs.py │ ├── logger.py │ └── metrics.py ├── README.md └── .gitignore
+UDPvsTCP/
+├── data/
+│   ├── logs/
+│   │   ├── cliente_tcp.log
+│   │   ├── cliente_udp.log
+│   │   ├── servidor_tcp.log
+│   │   └── servidor_udp.log
+│   └── resultados/
+│       ├── cliente_tcp_tamanho_tempo.png
+│       ├── cliente_udp_tamanho_tempo.png
+│       ├── comparacao_pacotes_efetivos.png
+│       ├── comparacao_tempo_total.png
+│       └── comparacao_vazao.png
+├── scripts/
+│   ├── cliente_tempo_medio.py
+│   ├── comp_pacotes_enviados.py
+│   ├── comp_tempo_total_10m.py
+│   ├── comp_vazao.py
+│   └── cut.py
+├── src/
+│   ├── tcp/
+│   │   ├── client.py
+│   │   └── servidor_tcp.py
+│   ├── udp/
+│   │   ├── cliente_udp.py
+│   │   └── servidor_udp.py
+│   └── utils/
+│       ├── configs.py
+│       ├── logger.py
+│       └── metrics.py
+├── README.md
+└── .gitignore
 
 
 ## Como Executar
